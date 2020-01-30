@@ -1,0 +1,81 @@
+article {
+
+}
+
+article .picture {
+    width: 200px;
+    height: 150px;
+    background: tomato;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+article .text {
+    clear: left;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    background: blanchedalmond;
+    font-size: 30px;
+    margin: 10px;
+    float: left;
+}
+
+.boxes {
+    width: 200px;
+    height: 150px;
+    background: yellowgreen;
+    font-size: 30px;
+    margin: 10px;
+    clear: left;
+}
+
+.newbox {
+    width: 200px;
+    height: 150px;
+    background: green;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.parent {
+    width: 200px;
+    height: 150px;
+    border: 2px dashed orangered;
+    margin: 10px;
+    position: absolute;
+    top: 453px;
+    left: 227px; 
+}
+
+.child {
+    width: 20px;
+    height: 15px;
+    border: 2px dashed orange;
+    position: absolute;
+    top: 70px;
+    left: 90px;
+}
+
+.section {
+    height: 200px;
+    border: 2px dashed pink;
+}
+
+.section h1 {
+    text-align: center;
+    line-height: 3;
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+
+}
