@@ -1,0 +1,46 @@
+section {
+    height: 300px;
+}
+
+.section1 {
+    background-image: url('./images/endless-summer-2560x1440-4k-hd-wallpaper-lake-mountains-levitation-284.jpg');
+    background-size: auto 100%;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+.section2 {
+    background-image: url(./images/lighthouse-3840x2160-hd-4k-wallpaper-rocks-sea-sunset-5287.jpg);
+    background-size: auto 100%;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+.section3 {
+    background-image: url(./images/pirate-ship-2560x1440-sea-ocean-sunset-skull-land-277.jpg);
+    background-size: auto 100%;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+.section4 {
+    background-image: url(./images/seasons-after-fall-3840x2160-best-games-2015-game-fairy-tale-arcade-4177.jpg);
+    background-size: auto 100%;
+    background-position: right bottom;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 95%;
+    height: 300px;
+    border: 2px solid lightcoral;
+    margin: 50px;
+    overflow: auto;
+    background-image: url('./images/pirate-ship-2560x1440-sea-ocean-sunset-skull-land-277.jpg');
+    background-attachment: local;
+    background-size: 100%;
+}
+
+.for-scroll {
+    height: 2000px;
+}
