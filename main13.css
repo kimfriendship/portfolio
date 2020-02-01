@@ -1,0 +1,97 @@
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: powderblue;
+    margin: 50px;
+    transition-property: width, background;
+    transition: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.box1:hover {
+    width: 300px;
+    background: palegreen;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background: salmon;
+    margin: 50px;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg) translate(-150px, -310px);
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background: khaki;
+    margin: 50px;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.box3:hover {
+    transform: skew(10deg) scale(0.9)
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    transition: 1s;
+    transform: perspective(500px) rotateY(40deg);
+}
+
+.box4:active {
+    transform: rotateY(180deg);
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    transition: 1s;
+    transform-origin: right, bottom;
+    transform: rotate(50deg);
+}
+
+.perspective {
+    perspective: 1000px;
+    width: 300px;
+    margin: 60px;
+}
+
+.gparent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 4px solid olive;
+    transition: 1s;
+    transform: rotateX(20deg);
+    transform-style: preserve-3d;
+}
+
+.parent {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed orange;
+    transition: 1s;
+    transform: rotateY(-30deg);
+    transform-style: preserve-3d;
+}
+
+.box6 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transition: 1s;
+    border: 2px dotted red;
+    transform: rotateX(-80deg);
+}
