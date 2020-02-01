@@ -1,0 +1,87 @@
+div {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.box1 {
+  background: olivedrab;
+  display: flex;
+}
+.box1:hover {
+  animation: first-animation 2s 0s infinite alternate linear;
+}
+.box2 {
+  background: dodgerblue;
+  display: flex;
+}
+.box2:hover {
+  animation: first-animation 2s 1s infinite alternate linear;
+}
+.box3 {
+  background: firebrick;
+  display: flex;
+}
+.box3:hover {
+  animation: first-animation 2s -1s infinite alternate linear;
+}
+@keyframes first-animation {
+  0% {
+    width: 100px;
+    background: yellowgreen;
+  }
+  75% {
+    width: 500px;
+    background: orchid;
+  }
+  100% {
+    width: 300px;
+    background: indianred;
+  }
+}
+.box4 {
+  display: flex;
+  background:gold;
+}
+.box4::before {
+  content: 'move';
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.box4:hover {
+  animation: move 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.box4:active {
+  animation-play-state: paused;
+  background: peru;
+}
+.box4:active::before {
+  content: 'stop';
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+}
+@keyframes move {
+  0% { 
+    transform: translate(0, 0);
+  }
+  25% { 
+    transform: translate(100px, 0);
+  }
+  50% { 
+    transform: translate(100px, 100px);
+  }
+  75% { 
+    transform: translate(0, 100px);
+  }
+  100% { 
+    transform: translate(0, 0);
+  }
+}
