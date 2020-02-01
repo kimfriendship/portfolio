@@ -1,0 +1,8 @@
+p {
+  /* columns: 200px, 3; */
+  column-width: 200px;
+  column-count: 3;
+  text-align: justify;
+  column-gap: 20px;
+  column-rule: 4px double pink;
+}
