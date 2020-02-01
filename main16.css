@@ -1,0 +1,112 @@
+.CONTAINER {
+  display: inline-flex;
+}
+.container {
+  width: 500px;
+  height: 400px;
+  border: 3px solid;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+.container .item {
+  font-size: 30px;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background: gold;
+  border: 2px dashed palevioletred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containers {
+  width: 500px;
+  height: 400px;
+  border: 3px solid;
+  border-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  align-items: baseline;
+}
+.containers .items {
+  font-size: 10px;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background: palevioletred;
+  border: 2px dashed purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containers .items:nth-child(3) {
+  font-size: 30px;
+}
+.containers .items:nth-child(1) {
+  align-items: flex-end;
+}
+
+.containerss {
+  width: 500px;
+  height: 400px;
+  border: 3px solid;
+  border-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.containerss .itemss {
+  font-size: 30px;
+  border-radius: 50px;
+  height: 100px;
+  background: lightseagreen;
+  border: 2px dashed darkgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.i2 {
+  order: -1;
+  flex-grow: 2;
+}
+.containerss .itemss:nth-last-child(3) {
+  order: 1;
+  flex-grow: 1;
+}
+
+.box {
+  display: inline-flex;
+}
+.fourth {
+  width: 500px;
+  height: 400px;
+  border: 3px solid;
+  border-top: 0;
+  border-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.fourth .f {
+  font-size: 30px;
+  border-radius: 10px;
+  height: 100px;
+  background: lightskyblue;
+  border: 2px dashed darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-basis: 100px;
+}
+.fi1 {
+  flex-grow: 2;
+}
+.fi3 {
+  flex-grow: 3;
+}
