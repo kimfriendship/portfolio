@@ -3,13 +3,15 @@ import classNames from "classnames/bind";
 import styles from "../Scss/about.module.scss";
 import profile from "../Asset/boree.jpeg";
 import Title from "./Title";
-import { Email, GitHub, LibraryBooks } from "@material-ui/icons";
+import { Email } from "@styled-icons/material/Email";
+import { Github } from "@styled-icons/icomoon/Github";
+import { Book } from "@styled-icons/boxicons-regular/Book";
 
 const cx = classNames.bind(styles);
 
 const Profile = () => {
   return (
-    <section className={cx("profile")}>
+    <section className={cx("profileSection")}>
       <Title>PROFILE</Title>
       <div className={cx("introWrapper")}>
         <img
@@ -26,7 +28,7 @@ const Profile = () => {
                 className={cx("contact")}
                 href="mailto:kfriendship94@gmail.com"
               >
-                <Email className={cx("icons")} />
+                <Email size="20" className={cx("icons")} />
                 kfriendship94@gmail.com
               </a>
             </li>
@@ -35,7 +37,7 @@ const Profile = () => {
                 className={cx("contact")}
                 href="https://github.com/kimfriendship"
               >
-                <GitHub className={cx("icons")} />
+                <Github size="20" className={cx("icons")} />
                 https://github.com/kimfriendship
               </a>
             </li>
@@ -44,7 +46,7 @@ const Profile = () => {
                 className={cx("contact")}
                 href="https://velog.io/@kimfriendship/series"
               >
-                <LibraryBooks className={cx("icons")} />
+                <Book size="20" className={cx("icons")} />
                 https://velog.io/@kimfriendship/series
               </a>
             </li>

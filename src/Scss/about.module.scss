@@ -1,11 +1,8 @@
 .mainAbout {
-  // background-color: lavender;
   width: 80%;
-  height: 80vh;
   margin: 6rem auto 0;
 
-  .profile {
-    // background-color: lightblue;
+  .profileSection {
     margin-top: 10rem;
 
     .introWrapper {
@@ -44,10 +41,9 @@
             display: flex;
             align-items: center;
             margin-bottom: 0.5rem;
-            color: rgb(25, 172, 175);
+            color: #32ac8d;
 
             .icons {
-              font-size: 2.3rem;
               margin-right: 1rem;
             }
           }
@@ -61,7 +57,25 @@
       }
     }
   }
-  .skills {
-    background-color: lightsteelblue;
+
+  .skillSection {
+    // background-color: lightsteelblue;
+    margin-top: 10rem;
+
+    .skillList {
+      .skill {
+        font-size: 1.6rem;
+        width: fit-content;
+        display: inline-block;
+        padding: 0.5rem 2rem 0.5rem 1.5rem;
+        margin: 0 1rem 1rem 0;
+        border-radius: 10px;
+        color: white;
+
+        .icons {
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 }
