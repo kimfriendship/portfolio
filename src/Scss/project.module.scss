@@ -19,6 +19,7 @@
       .card {
         font-size: 2rem;
         display: flex;
+        flex-flow: column;
         justify-content: center;
         align-items: center;
         width: 30%;
@@ -26,8 +27,6 @@
         min-width: 10rem;
         min-height: 10rem;
         position: relative;
-        font-size: 2.5rem;
-        font-weight: 600;
         color: transparent;
         transition: 0.2s ease-in;
         cursor: pointer;
@@ -41,8 +40,23 @@
           z-index: -10;
         }
 
+        .name {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .date {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .topic {
+          font-size: 2rem;
+        }
+
         &:hover {
-          background-color: rgba(19, 19, 19, 0.7);
+          background-color: rgba(19, 19, 19, 0.8);
           color: white;
           transition: 0.2s ease-in;
         }
@@ -84,7 +98,6 @@
   }
 
   .infoWrapper {
-    // background-color: palegoldenrod;
     margin-top: 2.5rem;
 
     .info {

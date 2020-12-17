@@ -13,7 +13,9 @@ const ProjectCards = ({ project, openModal }) => {
         src={thumbnail}
         alt={`${name} thumbnail`}
       />
-      {name}
+      <span className={cx("name")}>{name}</span>
+      <span className={cx("date")}>{date}</span>
+      <span className={cx("topic")}>{topic}</span>
     </li>
   );
 };
