@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames/bind";
-import styles from "../Scss/app.scss";
+import styles from "../Scss/global.scss";
 
 const cx = classNames.bind(styles);
 
@@ -16,14 +16,21 @@ const Header = () => {
           activeClassName={cx("activeMenu")}
           className={cx("menu")}
         >
-          Home
+          HOME
+        </NavLink>
+        <NavLink
+          to="/about"
+          activeClassName={cx("activeMenu")}
+          className={cx("menu")}
+        >
+          ABOUT
         </NavLink>
         <NavLink
           to="/project"
           activeClassName={cx("activeMenu")}
           className={cx("menu")}
         >
-          Project
+          PROJECT
         </NavLink>
       </nav>
     </header>

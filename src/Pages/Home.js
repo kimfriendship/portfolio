@@ -1,16 +1,14 @@
 import React from "react";
-import About from "../Components/About";
-import Skills from "../Components/Skills";
+import Greet from "../Components/Greet";
 import classNames from "classnames/bind";
-import styles from "../Scss/home.scss";
+import styles from "../Scss/global.scss";
 
 const cx = classNames.bind(styles);
 
 const Home = () => {
   return (
     <main className={cx("main")}>
-      <About />
-      <Skills />
+      <Greet />
     </main>
   );
 };
