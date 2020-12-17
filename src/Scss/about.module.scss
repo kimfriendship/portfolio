@@ -19,7 +19,7 @@
       }
 
       .intro {
-        margin-top: 7rem;
+        margin-top: 8rem;
 
         .name {
           display: inline;
@@ -36,7 +36,7 @@
 
         .contactList {
           font-size: 1.6rem;
-          margin: 2rem 0;
+          margin: 2rem 0 3rem;
 
           .contact {
             display: flex;
@@ -53,14 +53,18 @@
         .detail {
           display: block;
           font-size: 1.6rem;
-          line-height: 2rem;
+          line-height: 2.5rem;
+
+          p {
+            margin-bottom: 1rem;
+          }
         }
       }
     }
   }
 
   .skillSection {
-    margin-top: 10rem;
+    margin-top: 8rem;
 
     .skillList {
       .skill {
@@ -70,7 +74,7 @@
         align-items: center;
         padding: 0.5rem 2rem 0.5rem 1.5rem;
         margin: 0 1rem 1rem 0;
-        border-radius: 10px;
+        border-radius: 5px;
         color: white;
 
         .icons {

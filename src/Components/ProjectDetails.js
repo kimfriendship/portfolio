@@ -40,12 +40,16 @@ const ProjectDetails = ({ projectId }) => {
         </span>
         <span className={cx("info")}>
           <Github size="20" className={cx("icons")} />
-          <a href={github}>Repository 바로가기</a>
+          <a href={github} className={cx("link")}>
+            Repository 바로가기
+          </a>
         </span>
         {page && (
           <span className={cx("info")}>
             <Link size="20" className={cx("icons")} />
-            <a href={page}>페이지 바로가기</a>
+            <a href={page} className={cx("link")}>
+              페이지 바로가기
+            </a>
           </span>
         )}
       </div>

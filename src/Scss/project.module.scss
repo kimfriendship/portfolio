@@ -41,13 +41,13 @@
         }
 
         .name {
-          font-size: 2.5rem;
+          font-size: 3rem;
           font-weight: 600;
           margin-bottom: 1rem;
         }
 
         .date {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           margin-bottom: 1rem;
         }
 
@@ -102,12 +102,24 @@
 
     .info {
       font-size: 1.6rem;
-      line-height: 2.5rem;
+      height: 2.5rem;
       display: flex;
       align-items: center;
 
       .icons {
         margin-right: 1rem;
+        border-bottom: none;
+      }
+
+      .link {
+        border-bottom: 1px solid black;
+        transition: 0.2s ease-in;
+
+        &:hover {
+          color: darkcyan;
+          border-bottom: 1px solid darkcyan;
+          transition: 0.2s ease-in;
+        }
       }
 
       &:nth-of-type(1) {
