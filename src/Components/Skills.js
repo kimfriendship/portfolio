@@ -29,34 +29,34 @@ const Skills = () => {
       <ul className={cx("skillList")}>
         <li className={cx("skill")} style={{ backgroundColor: colors.html5 }}>
           <Html5 size="30" className={cx("icons")} />
-          HTML5
+          <span>HTML5</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.css3 }}>
           <Css3 size="30" className={cx("icons")} />
-          CSS3
+          <span>CSS3</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.js }}>
           <Javascript size="30" className={cx("icons")} />
-          JavaScript
+          <span>JavaScript</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.react }}>
           <ReactLogo size="30" className={cx("icons")} />
-          React.js
+          <span>React.js</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.redux }}>
           <Redux size="30" className={cx("icons")} />
-          Redux
+          <span>Redux</span>
         </li>
         <li
           className={cx("skill")}
           style={{ backgroundColor: colors.StyledComponents }}
         >
           <StyledComponents size="30" className={cx("icons")} />
-          Styled-Components
+          <span>Styled-Components</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.git }}>
           <Git size="30" className={cx("icons")} />
-          Git
+          <span>Git</span>
         </li>
       </ul>
     </section>
