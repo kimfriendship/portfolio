@@ -94,6 +94,10 @@ video {
   font-size: 10px;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
 }
 /* HTML5 display-role reset for older browsers */
 article,

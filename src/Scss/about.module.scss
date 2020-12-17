@@ -1,0 +1,67 @@
+.mainAbout {
+  // background-color: lavender;
+  width: 80%;
+  height: 80vh;
+  margin: 6rem auto 0;
+
+  .profile {
+    // background-color: lightblue;
+    margin-top: 10rem;
+
+    .introWrapper {
+      display: flex;
+
+      .profileImg {
+        width: 40%;
+        height: 40%;
+        max-width: 20rem;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-right: 1.5rem;
+      }
+
+      .intro {
+        margin-top: 7rem;
+
+        .name {
+          display: inline;
+          font-size: 2.5rem;
+          font-weight: 500;
+          margin: 0 0.5rem;
+        }
+
+        .position {
+          display: inline;
+          font-size: 2rem;
+          font-weight: 500;
+        }
+
+        .contactList {
+          font-size: 1.6rem;
+          margin: 2rem 0;
+
+          .contact {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            color: rgb(25, 172, 175);
+
+            .icons {
+              font-size: 2.3rem;
+              margin-right: 1rem;
+            }
+          }
+        }
+
+        .detail {
+          display: block;
+          font-size: 1.6rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+  .skills {
+    background-color: lightsteelblue;
+  }
+}

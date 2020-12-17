@@ -1,6 +1,8 @@
 $shadow: #ececec;
 
 .header {
+  background-color: black;
+  opacity: 0.7;
   width: 100%;
   height: 6rem;
   display: flex;
@@ -15,6 +17,7 @@ $shadow: #ececec;
     font-size: 3rem;
     font-weight: 700;
     line-height: 6rem;
+    text-decoration: none;
     color: white;
   }
 
@@ -45,13 +48,6 @@ $shadow: #ececec;
   z-index: 100;
 }
 
-.main {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: lavender;
-}
-
 .dimmed {
   background-color: black;
   opacity: 0.7;
@@ -59,4 +55,13 @@ $shadow: #ececec;
   height: 100%;
   position: absolute;
   top: 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid black;
+  width: 20rem;
+  padding: 0 0 0.3rem;
+  margin-bottom: 1.3rem;
 }

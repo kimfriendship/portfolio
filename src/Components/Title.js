@@ -4,8 +4,8 @@ import styles from "../Scss/global.module.scss";
 
 const cx = classNames.bind(styles);
 
-const Dimmed = () => {
-  return <div className={cx("dimmed")}></div>;
+const Title = ({ children }) => {
+  return <h2 className={cx("title")}>{children}</h2>;
 };
 
-export default Dimmed;
+export default Title;

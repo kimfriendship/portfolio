@@ -1,14 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames/bind";
-import styles from "../Scss/global.scss";
+import styles from "../Scss/global.module.scss";
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
   return (
     <header className={cx("header")}>
-      <h1 className={cx("logo")}>kimfriendship</h1>
+      <h1>
+        <a className={cx("logo")} href="localhost:3000">
+          kimfriendship
+        </a>
+      </h1>
       <nav>
         <NavLink
           to="/"

@@ -1,7 +1,7 @@
 import React from "react";
 import Dimmed from "./Dimmed";
 import classNames from "classnames/bind";
-import styles from "../Scss/home.scss";
+import styles from "../Scss/home.module.scss";
 
 const cx = classNames.bind(styles);
 
