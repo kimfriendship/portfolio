@@ -1,35 +1,39 @@
-$shadow: #ececec;
-
 .header {
   width: 100%;
   height: 6rem;
-  display: flex;
-  justify-content: space-between;
   padding: 0 10%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
 
-  .logo {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 6rem;
-    text-decoration: none;
-    color: white;
-  }
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
 
-  .menu {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 6rem;
-    margin: 0 1rem;
-  }
+    .logo {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 6rem;
+      text-decoration: none;
+      color: white;
+    }
 
-  .activeMenu {
-    border-bottom: 2px solid white;
+    .menu {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 6rem;
+      margin: 0 1rem;
+    }
+
+    .activeMenu {
+      border-bottom: 2px solid white;
+    }
   }
 }
 
@@ -53,6 +57,7 @@ $shadow: #ececec;
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: 150;
 }
 
 .title {
