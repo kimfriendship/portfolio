@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Dimmed from "./Dimmed";
 import ProjectDetails from "./ProjectDetails";
-import ProjectCarouselContainer from "../Containers/ProjectCarouselContainer";
 import classNames from "classnames/bind";
 import styles from "../Scss/project.module.scss";
+import { Close } from "@styled-icons/evaicons-solid/Close";
 
 const cx = classNames.bind(styles);
 
@@ -15,10 +15,12 @@ const Modal = ({ state, closeModal }) => {
   return ReactDOM.createPortal(
     <>
       <article className={cx("modal")}>
-        <ProjectCarouselContainer />
-        <ProjectDetails />
+        <ProjectDetails projectId={state} />
+        <button className={cx("closeBtn")} type="button" onClick={closeModal}>
+          <Close size="30" />
+        </button>
       </article>
-      <Dimmed closeModal={closeModal}></Dimmed>
+      <Dimmed closeModal={closeModal} zIndex={150}></Dimmed>
     </>,
     modal
   );
