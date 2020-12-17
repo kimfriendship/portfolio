@@ -6,7 +6,6 @@
     margin-top: 15rem;
 
     .cardList {
-      // background-color: lightblue;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -26,6 +25,7 @@
         font-weight: 600;
         color: transparent;
         transition: 0.2s ease-in;
+        cursor: pointer;
 
         .cardImg {
           width: 100%;

@@ -1,13 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "../Scss/global.module.scss";
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const style = { backgroundColor: "black", opacity: "0.7" };
+
   return (
-    <header className={cx("header")}>
+    <header className={cx("header")} style={isHome ? {} : style}>
       <h1>
         <a className={cx("logo")} href="localhost:3000">
           kimfriendship

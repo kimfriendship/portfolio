@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../Components/Title";
 import ProjectCards from "../Components/ProjectCards";
 import classNames from "classnames/bind";
 import styles from "../Scss/project.module.scss";
+import data from "../Data/projectData";
+import Modal from "../Components/Modal";
 
 const cx = classNames.bind(styles);
 
 const ProjectsContainer = () => {
+  const [modal, setModal] = useState(null);
+
+  const openModal = (id) => setModal(id);
+  const closeModal = () => setModal(null);
+
   return (
-    <section className={cx("projectSection")}>
-      <Title>PROJECTS</Title>
-      <ProjectCards />
-    </section>
+    <>
+      <section className={cx("projectSection")}>
+        <Title>PROJECTS</Title>
+        <ul className={cx("cardList")}>
+          {data.map((project) => (
+            <ProjectCards
+              project={project}
+              key={project.id}
+              openModal={openModal}
+            />
+          ))}
+        </ul>
+      </section>
+      <Modal state={modal} closeModal={closeModal} />
+    </>
   );
 };
 
