@@ -5,7 +5,7 @@ import NavButton from "./NavButton";
 
 const cx = classNames.bind(styles);
 
-const Carousel = ({ state, events }) => {
+const Carousel = ({ state, imageStyle, events }) => {
   const { renderArray, isMovingNext, isMovingBefore, count } = state;
   const { moveNext, moveBefore } = events;
 
@@ -24,7 +24,12 @@ const Carousel = ({ state, events }) => {
               `${isMovingNext && "next"}`
             )}
           >
-            <img className={cx("image")} src={src} alt={alt} />
+            <img
+              className={cx("image")}
+              style={imageStyle}
+              src={src}
+              alt={alt}
+            />
             <figcaption className={cx("caption")}>{caption}</figcaption>
           </figure>
         ))}

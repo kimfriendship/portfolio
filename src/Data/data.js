@@ -6,6 +6,21 @@ import GL_Thumb from "../Asset/GL_Thumb.png";
 import TTT_Home from "../Asset/TTT_Home.png";
 import TTT_Timeline from "../Asset/TTT_Timeline.png";
 import TTT_Info from "../Asset/TTT_Info.png";
+import TTT_Modal from "../Asset/TTT_Modal.png";
+import TTT_Thumb from "../Asset/TTT_Thumb.png";
+import DND_Home from "../Asset/DND_Home.png";
+import DND_Bookmark from "../Asset/DND_Bookmark.png";
+import DND_Cards from "../Asset/DND_Cards.png";
+import DND_Filter from "../Asset/DND_Filter.png";
+import DND_Map from "../Asset/DND_Map.png";
+import DND_Thumb from "../Asset/DND_Thumb.png";
+import DND_Modal from "../Asset/DND_Modal.png";
+// import from '../Asset/'
+// import from '../Asset/'
+// import from '../Asset/'
+// import from '../Asset/'
+// import from '../Asset/'
+// import from '../Asset/'
 // import from '../Asset/'
 
 const projectData = [
@@ -45,11 +60,15 @@ const projectData = [
       "최적화를 통해 리렌더링 최소화 및 성능 향상",
       "PC와 Mobile 버전으로 반응형 구현",
     ],
+    style: {
+      objectFit: "cover",
+      height: "55rem",
+    },
   },
   {
     id: 2,
     name: "airdnd",
-    thumbnail: Boree,
+    thumbnail: DND_Thumb,
     detail:
       "직접 주도하여 프론트와 백 개발자들이 함께 작업한 airbnb 클론 프로젝트입니다.",
     date: "2020.08.03 - 2020.09.11",
@@ -64,7 +83,38 @@ const projectData = [
     ],
     github: "https://github.com/kimfriendship/airdnd-frontend",
     page: "",
-    images: [],
+    images: [
+      {
+        src: DND_Home,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: DND_Filter,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: DND_Cards,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: DND_Map,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: DND_Modal,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: DND_Bookmark,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+    ],
     features: [
       "Redux를 통해 필터 조건, 페이지, 지도 범위 등 검색 페이지와 관련된 모든 state 관리",
       "숙소 리스트에 있는 숙소들을 지도 상에 각각의 위도 경도에 맞게 숙소 가격 마커 렌더",
@@ -75,11 +125,15 @@ const projectData = [
       "검색 조건을 query로 관리하여 refresh 되더라도 상태 유지",
       "3가지 뷰포트를 기준으로 한 반응형 구현",
     ],
+    style: {
+      objectFit: "contain",
+      height: "41rem",
+    },
   },
   {
     id: 3,
     name: "time to travel",
-    thumbnail: Boree,
+    thumbnail: TTT_Thumb,
     detail: "바닐라 스크립트로 작성한 여행 스케줄 관리 프로젝트입니다.",
     date: "2020.04.20 - 2020.04.24",
     topic: "여행 스케줄 관리 앱",
@@ -90,6 +144,11 @@ const projectData = [
     images: [
       {
         src: TTT_Home,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: TTT_Modal,
         alt: "게임 결과 화면 ",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
@@ -110,6 +169,11 @@ const projectData = [
       "여행지 정보 제공 및 예약 정보를 저장할 수 있는 기능 구현",
       "여행지별 목록을 나열할 수 있는 기능 구현",
     ],
+    style: {
+      objectFit: "cover",
+      objectPosition: "right",
+      height: "55rem",
+    },
   },
 ];
 

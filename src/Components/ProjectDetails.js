@@ -19,11 +19,12 @@ const ProjectDetails = ({ project }) => {
     page,
     github,
     images,
+    style,
   } = project;
 
   return (
     <>
-      <CarouselContainer images={images} />
+      <CarouselContainer images={images} imageStyle={style} />
       <div className={cx("infoWrapper")}>
         <span className={cx("info")}>{detail}</span>
         <span className={cx("info")}>

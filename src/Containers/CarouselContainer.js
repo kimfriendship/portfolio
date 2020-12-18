@@ -53,7 +53,7 @@ const reducer = (state, action) => {
   }
 };
 
-const CarouselContainer = ({ images }) => {
+const CarouselContainer = ({ images, imageStyle }) => {
   const [state, dispatch] = useReducer(reducer, initState);
   const { fullArray, isMovingNext, isMovingBefore, currentIdx } = state;
 
@@ -71,7 +71,13 @@ const CarouselContainer = ({ images }) => {
     !fullArray.length && getImages();
   }, [isMovingNext, isMovingBefore]);
 
-  return <Carousel state={state} events={{ moveNext, moveBefore }} />;
+  return (
+    <Carousel
+      state={state}
+      imageStyle={imageStyle}
+      events={{ moveNext, moveBefore }}
+    />
+  );
 };
 
 export default CarouselContainer;
