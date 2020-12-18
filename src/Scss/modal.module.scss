@@ -104,12 +104,13 @@ $width: -720;
           .image {
             width: 100%;
             height: 100%;
+            object-fit: cover;
           }
 
           .caption {
             width: 100%;
             margin: 0 auto;
-            padding: 0 0 2rem;
+            padding: 0 0 1rem;
             position: absolute;
             bottom: 0;
             font-size: 1.6rem;
@@ -119,7 +120,7 @@ $width: -720;
 
             .indexList {
               width: 100%;
-              padding: 1rem 0 1.5rem;
+              padding: 1rem 0;
               display: flex;
               justify-content: center;
 
@@ -191,16 +192,34 @@ $width: -720;
       }
     }
 
+    .scrollBtn {
+      // background-color: lavender;
+      border-radius: 0;
+      flex-direction: column;
+      width: 10rem;
+      height: 5rem;
+      position: absolute;
+      bottom: 1rem;
+      left: calc(50% - 5rem);
+      color: darken($point, 20%);
+
+      &:hover,
+      &:focus {
+        text-shadow: 2px 2px 2px lightgray;
+      }
+    }
+
     .closeBtn {
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 3.2rem;
+      height: 3.2rem;
 
       &:hover,
       &:focus {
-        box-shadow: 0 0 0 1px white, 0 0 0 3px black;
+        border: 1px solid black;
+        background-color: white;
       }
     }
   }

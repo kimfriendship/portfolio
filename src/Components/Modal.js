@@ -5,6 +5,7 @@ import ProjectDetails from "./ProjectDetails";
 import classNames from "classnames/bind";
 import styles from "../Scss/modal.module.scss";
 import { Close } from "@styled-icons/evaicons-solid/Close";
+import { ArrowheadDown } from "@styled-icons/evaicons-solid/ArrowheadDown";
 
 const cx = classNames.bind(styles);
 
@@ -22,10 +23,19 @@ const Modal = ({ closeModal, project }) => {
         </h3>
         <div className={cx("modalWrapper")}>
           <ProjectDetails project={project} />
+          {/* <button
+            type="button"
+            className={cx("btn", "scrollBtn")}
+            aria-label="아래로 스크롤"
+          >
+            Scroll Down
+            <ArrowheadDown size="20" />
+          </button> */}
           <button
             className={cx("closeBtn", "btn")}
             type="button"
             onClick={closeModal}
+            aria-label="모달창 닫기"
           >
             <Close size="30" />
           </button>

@@ -30,18 +30,18 @@ const projectData = [
     images: [
       {
         src: GL_Home,
-        alt: "게임 플레이어 수 설정 화면",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "플레이어 수 설정 화면",
+        caption: "플레이어 수에 따라 랜덤으로 프로필과 사다리 결정",
       },
       {
         src: GL_Game,
-        alt: "게임 화면",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "사다리 경로 화면",
+        caption: "케이스를 모두 입력한 뒤 게임을 시작하면 사다리 경로가 나타남",
       },
       {
         src: GL_Result,
         alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        caption: "전체 결과를 한번에 볼 수 있음",
       },
     ],
     features: [
@@ -53,7 +53,6 @@ const projectData = [
       "PC와 Mobile 버전으로 반응형 구현",
     ],
     style: {
-      objectFit: "cover",
       height: "55rem",
     },
   },
@@ -78,28 +77,28 @@ const projectData = [
     images: [
       {
         src: DND_Map,
-        alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "숙소 리스트와 지도 화면",
+        caption: "검색 조건에 맞는 숙소들을 리스트로 정렬하고 지도에 마커 표시",
       },
       {
         src: DND_Filter,
-        alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "숙소 필터 팝업 화면",
+        caption: "환불 정책, 숙소 유형, 요금 필터를 설정하여 숙소 검색",
       },
       {
         src: DND_Cards,
-        alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "지도를 없앤 카드형 숙소 리스트 화면",
+        caption: "지도 없이 숙소 리스트를 카드형으로 볼 수 있도록 설정",
       },
       {
         src: DND_Modal,
-        alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "필터 모달창 화면",
+        caption: "추가적인 필터를 설정하기 위한 모달",
       },
       {
         src: DND_Bookmark,
-        alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+        alt: "숙소 북마크 모달 화면",
+        caption: "북마크 목록을 생성하여 마음에 드는 숙소를 북마크에 추가",
       },
     ],
     features: [
@@ -113,7 +112,6 @@ const projectData = [
       "3가지 뷰포트를 기준으로 한 반응형 구현",
     ],
     style: {
-      objectFit: "contain",
       height: "41rem",
     },
   },
@@ -157,7 +155,6 @@ const projectData = [
       "여행지별 목록을 나열할 수 있는 기능 구현",
     ],
     style: {
-      objectFit: "cover",
       objectPosition: "right",
       height: "55rem",
     },
