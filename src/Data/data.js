@@ -1,11 +1,11 @@
 import Boree from "../Asset/boree.jpeg";
-import GL_Game from "../Asset/GL_Game.gif";
-import GL_Home from "../Asset/GL_Home.gif";
+import GL_Game from "../Asset/GL_Game.png";
+import GL_Home from "../Asset/GL_Home.png";
 import GL_Result from "../Asset/GL_Result.png";
 import GL_Thumb from "../Asset/GL_Thumb.png";
-// import from '../Asset/'
-// import from '../Asset/'
-// import from '../Asset/'
+import TTT_Home from "../Asset/TTT_Home.png";
+import TTT_Timeline from "../Asset/TTT_Timeline.png";
+import TTT_Info from "../Asset/TTT_Info.png";
 // import from '../Asset/'
 
 const projectData = [
@@ -22,6 +22,11 @@ const projectData = [
     page: "https://kimfriendship.github.io/ghost-leg/",
     images: [
       {
+        src: GL_Home,
+        alt: "게임 플레이어 수 설정 화면",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
         src: GL_Game,
         alt: "게임 화면",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
@@ -29,11 +34,6 @@ const projectData = [
       {
         src: GL_Result,
         alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
-      },
-      {
-        src: GL_Home,
-        alt: "게임 플레이어 수 설정 화면",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
     ],
@@ -87,7 +87,23 @@ const projectData = [
     techStack: ["JSON Server", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/kimfriendship/time-to-travel",
     page: "",
-    images: [],
+    images: [
+      {
+        src: TTT_Home,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: TTT_Timeline,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: TTT_Info,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+    ],
     features: [
       "JSON server를 이용하여 서버 통신",
       "여행 스케줄 타임라인을 구현",
