@@ -9,18 +9,11 @@ import { ReactLogo } from "@styled-icons/boxicons-logos/ReactLogo";
 import { Redux } from "@styled-icons/boxicons-logos/Redux";
 import { StyledComponents } from "@styled-icons/simple-icons/StyledComponents";
 import { Git } from "@styled-icons/boxicons-logos/Git";
+import { Figma } from "@styled-icons/boxicons-logos/Figma";
+import { Webpack } from "@styled-icons/simple-icons/Webpack";
+import { colors } from "../Data/data";
 
 const cx = classNames.bind(styles);
-
-const colors = {
-  html5: "#E24F27",
-  css3: "#1472B6",
-  js: "#EFC332",
-  react: "#44B8D8",
-  redux: "#764ABC",
-  StyledComponents: "#DB7091",
-  git: "#EF5132",
-};
 
 const Skills = () => {
   return (
@@ -39,6 +32,8 @@ const Skills = () => {
           <Javascript size="30" className={cx("icons")} />
           <span>JavaScript</span>
         </li>
+      </ul>
+      <ul className={cx("skillList")}>
         <li className={cx("skill")} style={{ backgroundColor: colors.react }}>
           <ReactLogo size="30" className={cx("icons")} />
           <span>React.js</span>
@@ -49,10 +44,20 @@ const Skills = () => {
         </li>
         <li
           className={cx("skill")}
-          style={{ backgroundColor: colors.StyledComponents }}
+          style={{ backgroundColor: colors.styledComponents }}
         >
           <StyledComponents size="30" className={cx("icons")} />
           <span>Styled-Components</span>
+        </li>
+      </ul>
+      <ul className={cx("skillList")}>
+        <li className={cx("skill")} style={{ backgroundColor: colors.webpack }}>
+          <Webpack size="30" className={cx("icons")} />
+          <span>Webpack</span>
+        </li>
+        <li className={cx("skill")} style={{ backgroundColor: colors.figma }}>
+          <Figma size="30" className={cx("icons")} />
+          <span>Figma</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.git }}>
           <Git size="30" className={cx("icons")} />

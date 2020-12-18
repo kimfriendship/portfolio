@@ -3,7 +3,7 @@ import Title from "../Components/Title";
 import ProjectCards from "../Components/ProjectCards";
 import classNames from "classnames/bind";
 import styles from "../Scss/project.module.scss";
-import data from "../Data/projectData";
+import data from "../Data/data";
 import Modal from "../Components/Modal";
 
 const cx = classNames.bind(styles);

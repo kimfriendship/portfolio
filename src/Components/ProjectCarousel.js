@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const ProjectCarousel = () => {
+const ProjectCarousel = ({ images }) => {
   return (
     <div className={cx("carousel")}>
       <figure className={cx("figure")}>

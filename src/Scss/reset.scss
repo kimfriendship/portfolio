@@ -116,6 +116,8 @@ section {
 body {
   line-height: 1;
   color: #181818;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 }
 ol,
 ul {
@@ -153,4 +155,10 @@ path {
 }
 html {
   font-size: 10px;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }

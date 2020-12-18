@@ -14,7 +14,12 @@ const projectData = [
     techStack: ["Canvas", "JavaScript", "React", "Styled-Component"],
     github: "https://github.com/kimfriendship/ghost-leg",
     page: "https://kimfriendship.github.io/ghost-leg/",
-    images: [],
+    images: [
+      {
+        image: Slam,
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+    ],
     features: [
       "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       "사다리 게임 로직을 리액트의 상태 관리와 자바스크립트로 구현",
@@ -74,5 +79,17 @@ const projectData = [
     ],
   },
 ];
+
+export const colors = {
+  html5: "#E24F27",
+  css3: "#1472B6",
+  js: "#EFC332",
+  react: "#44B8D8",
+  redux: "#764ABC",
+  styledComponents: "#DB7091",
+  webpack: "#1A74B9",
+  figma: "#11CF82",
+  git: "#EF5132",
+};
 
 export default projectData;
