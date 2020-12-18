@@ -54,7 +54,7 @@
       }
 
       &:hover {
-        background-color: $shadow;
+        background-color: darken($shadow, 90%);
         color: white;
         transition: 0.2s ease-in;
       }

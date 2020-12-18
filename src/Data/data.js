@@ -1,12 +1,18 @@
 import Boree from "../Asset/boree.jpeg";
-import Slam from "../Asset/slam.gif";
-import Horror from "../Asset/horror.gif";
+import GL_Game from "../Asset/GL_Game.gif";
+import GL_Home from "../Asset/GL_Home.gif";
+import GL_Result from "../Asset/GL_Result.png";
+import GL_Thumb from "../Asset/GL_Thumb.png";
+// import from '../Asset/'
+// import from '../Asset/'
+// import from '../Asset/'
+// import from '../Asset/'
 
 const projectData = [
   {
     id: 1,
     name: "ghost leg",
-    thumbnail: Boree,
+    thumbnail: GL_Thumb,
     detail: "캔버스와 리액트를 활용하여 만든 사다리 타기 게임입니다. ",
     date: "2020.12.02 - 2020.12.08",
     topic: "랜덤 사다리 타기",
@@ -16,13 +22,18 @@ const projectData = [
     page: "https://kimfriendship.github.io/ghost-leg/",
     images: [
       {
-        src: Boree,
-        alt: "boree",
+        src: GL_Game,
+        alt: "게임 화면",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
       {
-        src: Slam,
-        alt: "slam",
+        src: GL_Result,
+        alt: "게임 결과 화면 ",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: GL_Home,
+        alt: "게임 플레이어 수 설정 화면",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
     ],
@@ -38,7 +49,7 @@ const projectData = [
   {
     id: 2,
     name: "airdnd",
-    thumbnail: Slam,
+    thumbnail: Boree,
     detail:
       "직접 주도하여 프론트와 백 개발자들이 함께 작업한 airbnb 클론 프로젝트입니다.",
     date: "2020.08.03 - 2020.09.11",
@@ -68,7 +79,7 @@ const projectData = [
   {
     id: 3,
     name: "time to travel",
-    thumbnail: Horror,
+    thumbnail: Boree,
     detail: "바닐라 스크립트로 작성한 여행 스케줄 관리 프로젝트입니다.",
     date: "2020.04.20 - 2020.04.24",
     topic: "여행 스케줄 관리 앱",
