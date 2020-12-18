@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCarouselContainer from "../Containers/ProjectCarouselContainer";
 import classNames from "classnames/bind";
-import styles from "../Scss/project.module.scss";
+import styles from "../Scss/modal.module.scss";
 import data from "../Data/data";
 import { Github } from "@styled-icons/icomoon/Github";
 import { Calendar } from "@styled-icons/boxicons-regular/Calendar";

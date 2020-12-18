@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigateBefore } from "@styled-icons/material-rounded/NavigateBefore";
 import { NavigateNext } from "@styled-icons/material-rounded/NavigateNext";
-import styles from "../Scss/project.module.scss";
+import styles from "../Scss/modal.module.scss";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);

@@ -2,13 +2,15 @@ import React, { useReducer, useEffect } from "react";
 import ProjectCarousel from "../Components/ProjectCarousel";
 import { actions } from "../Data/data";
 
-const { GET_IMAGES, MOVE_BEFORE, MOVE_NEXT } = actions;
+const { GET_IMAGES, MOVE_BEFORE, MOVE_NEXT, END_MOVE } = actions;
 
 const initState = {
   currentIdx: 0,
   fullArray: [],
   renderArray: [],
   count: 0,
+  isMovingNext: false,
+  isMovingBefore: false,
 };
 
 const reducer = (state, action) => {
@@ -25,19 +27,25 @@ const reducer = (state, action) => {
       };
     case MOVE_NEXT:
       const nextIdx = getNextIdx(state.currentIdx);
-      console.log(nextIdx);
       return {
         ...state,
         currentIdx: nextIdx,
+        isMovingNext: true,
         renderArray: [...state.renderArray, state.fullArray[nextIdx]],
       };
     case MOVE_BEFORE:
       const beforeIdx = getBeforeIdx(state.currentIdx);
-      console.log(beforeIdx);
       return {
         ...state,
         currentIdx: beforeIdx,
+        isMovingBefore: true,
         renderArray: [state.fullArray[beforeIdx], ...state.renderArray],
+      };
+    case END_MOVE:
+      return {
+        ...state,
+        isMovingBefore: false,
+        isMovingNext: false,
       };
     default:
       throw new Error("Unhandled Action");
@@ -46,18 +54,23 @@ const reducer = (state, action) => {
 
 const ProjectCarouselContainer = ({ images }) => {
   const [state, dispatch] = useReducer(reducer, initState);
-  const { renderArray } = state;
+  const { fullArray, renderArray, currentIdx } = state;
 
+  const getImages = () => dispatch({ type: GET_IMAGES, images });
   const moveNext = () => dispatch({ type: MOVE_NEXT });
   const moveBefore = () => dispatch({ type: MOVE_BEFORE });
+  const endMove = () =>
+    setTimeout(
+      () => dispatch({ type: END_MOVE, newArray: [images[currentIdx]] }),
+      300
+    );
 
   useEffect(() => {
-    dispatch({ type: GET_IMAGES, images });
-  }, []);
+    fullArray.length && endMove();
+    !fullArray.length && getImages();
+  }, [renderArray]);
 
-  return (
-    <ProjectCarousel images={renderArray} events={{ moveNext, moveBefore }} />
-  );
+  return <ProjectCarousel state={state} events={{ moveNext, moveBefore }} />;
 };
 
 export default ProjectCarouselContainer;

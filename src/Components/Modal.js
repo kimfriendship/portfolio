@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Dimmed from "./Dimmed";
 import ProjectDetails from "./ProjectDetails";
 import classNames from "classnames/bind";
-import styles from "../Scss/project.module.scss";
+import styles from "../Scss/modal.module.scss";
 import { Close } from "@styled-icons/evaicons-solid/Close";
 
 const cx = classNames.bind(styles);
