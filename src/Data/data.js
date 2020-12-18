@@ -1,4 +1,3 @@
-import Boree from "../Asset/boree.jpeg";
 import GL_Game from "../Asset/GL_Game.png";
 import GL_Home from "../Asset/GL_Home.png";
 import GL_Result from "../Asset/GL_Result.png";
@@ -15,13 +14,6 @@ import DND_Filter from "../Asset/DND_Filter.png";
 import DND_Map from "../Asset/DND_Map.png";
 import DND_Thumb from "../Asset/DND_Thumb.png";
 import DND_Modal from "../Asset/DND_Modal.png";
-// import from '../Asset/'
-// import from '../Asset/'
-// import from '../Asset/'
-// import from '../Asset/'
-// import from '../Asset/'
-// import from '../Asset/'
-// import from '../Asset/'
 
 const projectData = [
   {
@@ -85,7 +77,7 @@ const projectData = [
     page: "",
     images: [
       {
-        src: DND_Home,
+        src: DND_Map,
         alt: "게임 결과 화면 ",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
@@ -96,11 +88,6 @@ const projectData = [
       },
       {
         src: DND_Cards,
-        alt: "게임 결과 화면 ",
-        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
-      },
-      {
-        src: DND_Map,
         alt: "게임 결과 화면 ",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },

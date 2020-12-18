@@ -6,7 +6,13 @@ import NavButton from "./NavButton";
 const cx = classNames.bind(styles);
 
 const Carousel = ({ state, imageStyle, events }) => {
-  const { renderArray, isMovingNext, isMovingBefore, count } = state;
+  const {
+    renderArray,
+    isMovingNext,
+    isMovingBefore,
+    count,
+    currentIdx,
+  } = state;
   const { moveNext, moveBefore } = events;
 
   if (!count) return null;
@@ -30,7 +36,22 @@ const Carousel = ({ state, imageStyle, events }) => {
               src={src}
               alt={alt}
             />
-            <figcaption className={cx("caption")}>{caption}</figcaption>
+            <figcaption className={cx("caption")}>
+              <ul className={cx("indexList")}>
+                {Array.from({ length: count }).map((_, i) => (
+                  <li
+                    className={cx("index")}
+                    key={i}
+                    style={{
+                      backgroundColor: `${
+                        currentIdx === i ? "white" : "black"
+                      }`,
+                    }}
+                  />
+                ))}
+              </ul>
+              <span>{caption}</span>
+            </figcaption>
           </figure>
         ))}
       </div>

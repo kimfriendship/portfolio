@@ -21,46 +21,46 @@ const Skills = () => {
       <Title>SKILLS</Title>
       <ul className={cx("skillList")}>
         <li className={cx("skill")} style={{ backgroundColor: colors.html5 }}>
-          <Html5 size="30" className={cx("icons")} />
+          <Html5 size="25" className={cx("icons")} />
           <span>HTML5</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.css3 }}>
-          <Css3 size="30" className={cx("icons")} />
+          <Css3 size="25" className={cx("icons")} />
           <span>CSS3</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.js }}>
-          <Javascript size="30" className={cx("icons")} />
+          <Javascript size="25" className={cx("icons")} />
           <span>JavaScript</span>
         </li>
       </ul>
       <ul className={cx("skillList")}>
         <li className={cx("skill")} style={{ backgroundColor: colors.react }}>
-          <ReactLogo size="30" className={cx("icons")} />
+          <ReactLogo size="25" className={cx("icons")} />
           <span>React.js</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.redux }}>
-          <Redux size="30" className={cx("icons")} />
+          <Redux size="25" className={cx("icons")} />
           <span>Redux</span>
         </li>
         <li
           className={cx("skill")}
           style={{ backgroundColor: colors.styledComponents }}
         >
-          <StyledComponents size="30" className={cx("icons")} />
+          <StyledComponents size="25" className={cx("icons")} />
           <span>Styled-Components</span>
         </li>
       </ul>
       <ul className={cx("skillList")}>
         <li className={cx("skill")} style={{ backgroundColor: colors.webpack }}>
-          <Webpack size="30" className={cx("icons")} />
+          <Webpack size="25" className={cx("icons")} />
           <span>Webpack</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.figma }}>
-          <Figma size="30" className={cx("icons")} />
+          <Figma size="25" className={cx("icons")} />
           <span>Figma</span>
         </li>
         <li className={cx("skill")} style={{ backgroundColor: colors.git }}>
-          <Git size="30" className={cx("icons")} />
+          <Git size="25" className={cx("icons")} />
           <span>Git</span>
         </li>
       </ul>
