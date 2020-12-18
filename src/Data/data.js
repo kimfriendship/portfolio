@@ -16,7 +16,8 @@ const projectData = [
     page: "https://kimfriendship.github.io/ghost-leg/",
     images: [
       {
-        image: Slam,
+        src: Slam,
+        alt: "fjdkslfjdksl",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
     ],

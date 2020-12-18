@@ -16,7 +16,11 @@ const Modal = ({ state, closeModal }) => {
     <>
       <article className={cx("modal")}>
         <ProjectDetails projectId={state} />
-        <button className={cx("closeBtn")} type="button" onClick={closeModal}>
+        <button
+          className={cx("closeBtn", "btn")}
+          type="button"
+          onClick={closeModal}
+        >
           <Close size="30" />
         </button>
       </article>

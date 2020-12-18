@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const Project = () => {
   return (
-    <main className={cx("mainProject")}>
+    <main className={cx("main")}>
       <ProjectsContainer />
     </main>
   );

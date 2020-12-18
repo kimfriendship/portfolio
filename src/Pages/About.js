@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const About = () => {
   return (
-    <main className={cx("mainAbout")}>
+    <main className={cx("main")}>
       <Profile />
       <Skills />
     </main>
