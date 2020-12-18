@@ -1,8 +1,7 @@
 import React from "react";
-import ProjectCarouselContainer from "../Containers/ProjectCarouselContainer";
+import CarouselContainer from "../Containers/CarouselContainer";
 import classNames from "classnames/bind";
 import styles from "../Scss/modal.module.scss";
-import data from "../Data/data";
 import { Github } from "@styled-icons/icomoon/Github";
 import { Calendar } from "@styled-icons/boxicons-regular/Calendar";
 import { Link } from "@styled-icons/boxicons-regular/Link";
@@ -10,10 +9,8 @@ import { PeopleFill } from "@styled-icons/bootstrap/PeopleFill";
 
 const cx = classNames.bind(styles);
 
-const ProjectDetails = ({ projectId }) => {
-  const project = data.filter(({ id }) => id === projectId)[0];
+const ProjectDetails = ({ project }) => {
   const {
-    name,
     date,
     member,
     detail,
@@ -26,8 +23,7 @@ const ProjectDetails = ({ projectId }) => {
 
   return (
     <>
-      <h3 className={cx("title")}>{name.toUpperCase()}</h3>
-      <ProjectCarouselContainer images={images} />
+      <CarouselContainer images={images} />
       <div className={cx("infoWrapper")}>
         <span className={cx("info")}>{detail}</span>
         <span className={cx("info")}>
@@ -53,7 +49,7 @@ const ProjectDetails = ({ projectId }) => {
           </span>
         )}
       </div>
-      <div className={cx("wrapper")}>
+      <div className={cx("featureWrapper")}>
         <h4 className={cx("subtitle")}>Features</h4>
         <ul className={cx("list")}>
           {features.map((feature, i) => (
@@ -63,7 +59,7 @@ const ProjectDetails = ({ projectId }) => {
           ))}
         </ul>
       </div>
-      <div className={cx("wrapper")}>
+      <div className={cx("techWrapper")}>
         <h4 className={cx("subtitle")}>Tech Stack</h4>
         <ul className={cx("list")}>
           {techStack.map((tech, i) => (

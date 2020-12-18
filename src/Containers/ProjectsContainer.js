@@ -4,7 +4,7 @@ import ProjectCards from "../Components/ProjectCards";
 import classNames from "classnames/bind";
 import styles from "../Scss/project.module.scss";
 import data from "../Data/data";
-import Modal from "../Components/Modal";
+import ModalContainer from "../Containers/ModalContainer";
 
 const cx = classNames.bind(styles);
 
@@ -28,7 +28,7 @@ const ProjectsContainer = () => {
           ))}
         </ul>
       </section>
-      <Modal state={modal} closeModal={closeModal} />
+      <ModalContainer state={modal} closeModal={closeModal} />
     </>
   );
 };

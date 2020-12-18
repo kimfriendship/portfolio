@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from "react";
-import ProjectCarousel from "../Components/ProjectCarousel";
+import Carousel from "../Components/Carousel";
 import { actions } from "../Data/data";
 
 const { GET_IMAGES, MOVE_BEFORE, MOVE_NEXT, END_MOVE } = actions;
@@ -53,7 +53,7 @@ const reducer = (state, action) => {
   }
 };
 
-const ProjectCarouselContainer = ({ images }) => {
+const CarouselContainer = ({ images }) => {
   const [state, dispatch] = useReducer(reducer, initState);
   const { fullArray, isMovingNext, isMovingBefore, currentIdx } = state;
 
@@ -71,7 +71,7 @@ const ProjectCarouselContainer = ({ images }) => {
     !fullArray.length && getImages();
   }, [isMovingNext, isMovingBefore]);
 
-  return <ProjectCarousel state={state} events={{ moveNext, moveBefore }} />;
+  return <Carousel state={state} events={{ moveNext, moveBefore }} />;
 };
 
-export default ProjectCarouselContainer;
+export default CarouselContainer;

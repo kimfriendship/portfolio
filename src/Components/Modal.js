@@ -8,21 +8,25 @@ import { Close } from "@styled-icons/evaicons-solid/Close";
 
 const cx = classNames.bind(styles);
 
-const Modal = ({ state, closeModal }) => {
+const Modal = ({ closeModal, project }) => {
+  if (!project) return null;
   const modal = document.getElementById("modal");
+  const { name } = project;
 
-  if (!state) return null;
   return ReactDOM.createPortal(
     <>
       <article className={cx("modal")}>
-        <ProjectDetails projectId={state} />
-        <button
-          className={cx("closeBtn", "btn")}
-          type="button"
-          onClick={closeModal}
-        >
-          <Close size="30" />
-        </button>
+        <h3 className={cx("title")}>{name.toUpperCase()}</h3>
+        <div className={cx("modalWrapper")}>
+          <ProjectDetails project={project} />
+          <button
+            className={cx("closeBtn", "btn")}
+            type="button"
+            onClick={closeModal}
+          >
+            <Close size="30" />
+          </button>
+        </div>
       </article>
       <Dimmed closeModal={closeModal} zIndex={150}></Dimmed>
     </>,

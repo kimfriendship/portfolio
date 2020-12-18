@@ -5,17 +5,15 @@ import NavButton from "./NavButton";
 
 const cx = classNames.bind(styles);
 
-const ProjectCarousel = ({ state, events }) => {
+const Carousel = ({ state, events }) => {
   const { renderArray, isMovingNext, isMovingBefore } = state;
   const { moveNext, moveBefore } = events;
-  console.log(isMovingBefore, isMovingNext, renderArray);
-  // console.log(images);
-  // if (!images) return null;
+
   return (
     <div className={cx("carousel")}>
       <NavButton direction={0} event={moveBefore} />
       <NavButton direction={1} event={moveNext} />
-      <div className={cx("wrapper")}>
+      <div className={cx("figureWrapper")}>
         {renderArray.map(({ src, alt, caption }, i) => (
           <figure
             key={i}
@@ -34,4 +32,4 @@ const ProjectCarousel = ({ state, events }) => {
   );
 };
 
-export default ProjectCarousel;
+export default Carousel;
