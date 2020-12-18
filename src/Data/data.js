@@ -16,7 +16,7 @@ const projectData = [
     page: "https://kimfriendship.github.io/ghost-leg/",
     images: [
       {
-        src: Slam,
+        src: Boree,
         alt: "fjdkslfjdksl",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
@@ -91,6 +91,12 @@ export const colors = {
   webpack: "#1A74B9",
   figma: "#11CF82",
   git: "#EF5132",
+};
+
+export const actions = {
+  GET_IMAGES: "GET_IMAGES",
+  MOVE_NEXT: "MOVE_NEXT",
+  MOVE_BEFORE: "MOVE_BEFORE",
 };
 
 export default projectData;
