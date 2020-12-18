@@ -6,9 +6,10 @@ import NavButton from "./NavButton";
 const cx = classNames.bind(styles);
 
 const Carousel = ({ state, events }) => {
-  const { renderArray, isMovingNext, isMovingBefore } = state;
+  const { renderArray, isMovingNext, isMovingBefore, count } = state;
   const { moveNext, moveBefore } = events;
 
+  if (!count) return null;
   return (
     <div className={cx("carousel")}>
       <NavButton direction={0} event={moveBefore} />

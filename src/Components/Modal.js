@@ -16,7 +16,10 @@ const Modal = ({ closeModal, project }) => {
   return ReactDOM.createPortal(
     <>
       <article className={cx("modal")}>
-        <h3 className={cx("title")}>{name.toUpperCase()}</h3>
+        <h3 className={cx("modalTitle")}>
+          {name.toUpperCase()}
+          <span className={cx("deco")}></span>
+        </h3>
         <div className={cx("modalWrapper")}>
           <ProjectDetails project={project} />
           <button

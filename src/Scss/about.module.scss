@@ -1,3 +1,5 @@
+@import "global.module.scss";
+
 .profileSection {
   margin-top: 13rem;
 
@@ -37,7 +39,7 @@
           display: flex;
           align-items: center;
           margin-bottom: 0.5rem;
-          color: #32ac8d;
+          color: darken($point, 30%);
 
           .icons {
             margin-right: 1rem;
