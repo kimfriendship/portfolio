@@ -44,6 +44,7 @@ const reducer = (state, action) => {
     case END_MOVE:
       return {
         ...state,
+        renderArray: action.newArray,
         isMovingBefore: false,
         isMovingNext: false,
       };
@@ -54,7 +55,7 @@ const reducer = (state, action) => {
 
 const ProjectCarouselContainer = ({ images }) => {
   const [state, dispatch] = useReducer(reducer, initState);
-  const { fullArray, renderArray, currentIdx } = state;
+  const { fullArray, isMovingNext, isMovingBefore, currentIdx } = state;
 
   const getImages = () => dispatch({ type: GET_IMAGES, images });
   const moveNext = () => dispatch({ type: MOVE_NEXT });
@@ -62,13 +63,13 @@ const ProjectCarouselContainer = ({ images }) => {
   const endMove = () =>
     setTimeout(
       () => dispatch({ type: END_MOVE, newArray: [images[currentIdx]] }),
-      300
+      500
     );
 
   useEffect(() => {
-    fullArray.length && endMove();
+    (isMovingNext || isMovingBefore) && endMove();
     !fullArray.length && getImages();
-  }, [renderArray]);
+  }, [isMovingNext, isMovingBefore]);
 
   return <ProjectCarousel state={state} events={{ moveNext, moveBefore }} />;
 };

@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const ProjectCarousel = ({ state, events }) => {
   const { renderArray, isMovingNext, isMovingBefore } = state;
   const { moveNext, moveBefore } = events;
-  console.log(renderArray);
+  console.log(isMovingBefore, isMovingNext, renderArray);
   // console.log(images);
   // if (!images) return null;
   return (

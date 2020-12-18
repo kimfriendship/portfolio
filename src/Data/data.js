@@ -17,7 +17,12 @@ const projectData = [
     images: [
       {
         src: Boree,
-        alt: "fjdkslfjdksl",
+        alt: "boree",
+        caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
+      },
+      {
+        src: Slam,
+        alt: "slam",
         caption: "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       },
     ],
