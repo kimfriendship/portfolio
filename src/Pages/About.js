@@ -10,7 +10,7 @@ const About = () => {
   return (
     <main className={cx("main")}>
       <Profile />
-      <Skills />
+      {/* <Skills /> */}
     </main>
   );
 };

@@ -5,14 +5,15 @@ import profile from "../Asset/boree.jpeg";
 import Title from "./Title";
 import { Email } from "@styled-icons/material/Email";
 import { Github } from "@styled-icons/icomoon/Github";
-import { Book } from "@styled-icons/boxicons-regular/Book";
+import { Book } from "@styled-icons/fa-solid/Book";
+import { TelephoneFill } from "@styled-icons/bootstrap/TelephoneFill";
 
 const cx = classNames.bind(styles);
 
 const Profile = () => {
   return (
     <section className={cx("profileSection")}>
-      <Title>PROFILE</Title>
+      <Title>ABOUT</Title>
       <div className={cx("introWrapper")}>
         <img
           src={profile}
@@ -23,6 +24,10 @@ const Profile = () => {
           <h4 className={cx("position")}>Front-End Developer</h4>
           <h3 className={cx("name")}>김우정</h3>
           <ul className={cx("contactList")}>
+            <li className={cx("contact")}>
+              <TelephoneFill size="20" className={cx("icons")} />
+              010 8024 2242
+            </li>
             <li>
               <a
                 className={cx("contact")}
