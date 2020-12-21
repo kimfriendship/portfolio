@@ -96,6 +96,7 @@ video {
   vertical-align: baseline;
   text-decoration: none;
 }
+a,
 a:visited {
   color: inherit;
 }

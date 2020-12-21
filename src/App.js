@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import MainRouter from "./Router/MainRouter";
+import MainRouter from "./Router/mainRouter";
+import { Header, Footer } from "./Components";
 
 function App() {
   return (

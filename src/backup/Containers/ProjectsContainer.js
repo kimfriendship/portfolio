@@ -4,7 +4,7 @@ import ProjectCards from "../Components/ProjectCards";
 import classNames from "classnames/bind";
 import styles from "../Scss/project.module.scss";
 import data from "../Data/data";
-import ModalContainer from "../Containers/ModalContainer";
+import ModalContainer from "./ModalContainer";
 
 const cx = classNames.bind(styles);
 
