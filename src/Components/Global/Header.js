@@ -30,12 +30,14 @@ const Header = () => {
 export default Header;
 
 const Background = styled.header`
-  background-color: lavender;
+  background-color: white;
+  box-shadow: 0 0 10px 0 gray;
   position: fixed;
   width: 100%;
   padding: 0 2rem;
   top: 0;
   left: 0;
+  z-index: 100;
 `;
 
 const Wrapper = styled.div`

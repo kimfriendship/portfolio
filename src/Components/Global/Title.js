@@ -5,7 +5,7 @@ const Title = ({ children }) => {
   return (
     <Text>
       {children}
-      <Deco />
+      <Deco></Deco>
     </Text>
   );
 };
@@ -13,7 +13,9 @@ const Title = ({ children }) => {
 export default Title;
 
 const Text = styled.h2`
-  font-size: 3rem;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 3.5rem;
   font-weight: 600;
   position: relative;
 `;
@@ -22,7 +24,10 @@ const Deco = styled.span`
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: green;
+  left: -15%;
+  width: 130%;
+  height: 1.5rem;
+  background-color: lightseagreen;
+  opacity: 0.5;
+  z-index: -10;
 `;
