@@ -157,9 +157,3 @@ path {
 html {
   font-size: 10px;
 }
-#root {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-}

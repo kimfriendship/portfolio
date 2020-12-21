@@ -3,9 +3,9 @@ import { Background } from "../Components";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Background />
-    </div>
+    </>
   );
 };
 

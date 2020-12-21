@@ -12,13 +12,13 @@ const Header = () => {
           <HomeLink href="localhost:3001/#home">kimFriendship</HomeLink>
         </Logo>
         <Nav>
-          <NavHashLink to="/#home" activeStyle={activeStyle}>
+          <NavHashLink smooth to="/#home" activeStyle={activeStyle}>
             HOME
           </NavHashLink>
-          <NavHashLink to="/#about" activeStyle={activeStyle}>
+          <NavHashLink smooth to="/#about" activeStyle={activeStyle}>
             ABOUT
           </NavHashLink>
-          <NavHashLink to="/#project" activeStyle={activeStyle}>
+          <NavHashLink smooth to="/#project" activeStyle={activeStyle}>
             PROJECT
           </NavHashLink>
         </Nav>
@@ -31,11 +31,15 @@ export default Header;
 
 const Background = styled.header`
   background-color: lavender;
+  position: fixed;
+  width: 100%;
+  padding: 0 2rem;
+  top: 0;
+  left: 0;
 `;
 
 const Wrapper = styled.div`
   max-width: 1200px;
-  width: 100%;
   height: 7rem;
   display: flex;
   justify-content: space-between;
@@ -44,7 +48,7 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 `;
 
