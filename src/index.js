@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 import App from "./App";
 import "./Style/reset.css";
+import "./Style/theme";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+    <ThemeProvider theme={theme}>
+      <App />
+    </BrowserRouter>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
