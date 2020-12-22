@@ -1,18 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
-const activeStyle = { borderBottom: "2px solid black" };
-
 const Header = () => {
+  const location = useLocation();
+  // const isHome = ["/", "/#home"].includes(location.pathname);
+  const isHome = false;
+  const activeStyle = {
+    borderBottom: `2px solid ${isHome ? "white" : "black"}`,
+  };
+
   return (
-    <Background>
+    <Background isHome={isHome}>
       <Wrapper>
-        <Logo>
+        <Logo isHome={isHome}>
           <HomeLink href="localhost:3001">kimFriendship</HomeLink>
         </Logo>
-        <Nav>
+        <Nav isHome={isHome}>
           <NavHashLink smooth to="/#home" activeStyle={activeStyle}>
             HOME
           </NavHashLink>
@@ -31,8 +36,8 @@ const Header = () => {
 export default Header;
 
 const Background = styled.header`
-  background-color: white;
-  box-shadow: 0 0 10px 0 gray;
+  background-color: ${({ isHome }) => (isHome ? "transparent" : "white")};
+  box-shadow: ${({ isHome }) => !isHome && "0 0 10px 0 gray"};
   position: fixed;
   width: 100%;
   padding: 0 2rem;
@@ -53,6 +58,7 @@ const Wrapper = styled.div`
 const Logo = styled.h1`
   font-size: 2rem;
   font-weight: 700;
+  color: ${({ isHome }) => (isHome ? "white" : "black")};
 `;
 
 const HomeLink = styled.a``;
@@ -62,6 +68,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   font-size: 1.5rem;
   font-weight: 600;
+  color: ${({ isHome }) => (isHome ? "white" : "black")};
 
   & * {
     padding: 0.2rem 0;
