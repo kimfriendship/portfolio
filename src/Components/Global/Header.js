@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
@@ -9,7 +10,7 @@ const Header = () => {
     <Background>
       <Wrapper>
         <Logo>
-          <HomeLink href="localhost:3001/#home">kimFriendship</HomeLink>
+          <HomeLink href="localhost:3001">kimFriendship</HomeLink>
         </Logo>
         <Nav>
           <NavHashLink smooth to="/#home" activeStyle={activeStyle}>

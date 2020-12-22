@@ -6,8 +6,10 @@ import Main from "../Pages/Main";
 const MainRouter = () => {
   return (
     <Switch>
-      <Route path={"/" || "/#home"} exact component={Main} />
-      <Route path="project/:name" component={Detail} />
+      <Route path="/" exact component={Main} />
+      {/* <Route path="/" component={Main} />
+      <Route path="/" component={Main} /> */}
+      <Route path="/#project/:name" component={Detail} />
     </Switch>
   );
 };

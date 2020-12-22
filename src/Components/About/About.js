@@ -1,19 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Title } from "../index";
+import { Title, Section } from "../index";
 
 const About = () => {
   return (
-    <Main id="about">
+    <Section id="about" height={"100vh"}>
       <Title>ABOUT</Title>
-    </Main>
+    </Section>
   );
 };
 
 export default About;
-
-const Main = styled.main`
-  width: 100%;
-  height: 100vh;
-  padding-top: 15rem;
-`;
