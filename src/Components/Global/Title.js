@@ -27,7 +27,7 @@ const Deco = styled.span`
   left: -15%;
   width: 130%;
   height: 1.5rem;
-  background-color: lightseagreen;
+  background-color: ${({ theme }) => theme.color.point};
   opacity: 0.5;
   z-index: -10;
 `;

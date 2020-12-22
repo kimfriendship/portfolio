@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Section = ({ id, height, children }) => {
+const Section = ({ id, children, height }) => {
   return (
     <Container id={id} height={height}>
       {children}

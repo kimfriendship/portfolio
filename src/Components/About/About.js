@@ -25,7 +25,6 @@ const About = () => {
 export default About;
 
 const Content = styled.div`
-  /* background-color: lightcoral; */
   margin-top: 10rem;
   display: flex;
 
@@ -38,5 +37,4 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: lightsteelblue; */
 `;
