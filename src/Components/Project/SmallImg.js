@@ -13,4 +13,8 @@ const Img = styled.img`
   position: absolute;
   /* height: 30rem;
   object-fit: cover; */
+
+  @media ${({ theme }) => theme.size.mobile} {
+    display: none;
+  }
 `;

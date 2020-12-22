@@ -21,6 +21,11 @@ const Wrapper = styled.div`
   right: ${({ pos }) => pos.right || ""};
   text-align: ${({ pos }) => (pos.left === 0 ? "left" : "right")};
   width: 50%;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    width: 100%;
+    position: static;
+  }
 `;
 
 const ProjectName = styled.span`
