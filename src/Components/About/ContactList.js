@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Email } from "@styled-icons/material/Email";
 import { Github } from "@styled-icons/icomoon/Github";
 import { Book } from "@styled-icons/fa-solid/Book";
@@ -26,8 +26,8 @@ const ContactList = () => {
       </Item>
       <Item>
         <Book size="20" />
-        <Link href="https://velog.io/@kimfriendship/series">
-          https://velog.io/@kimfriendship/series
+        <Link href="https://velog.io/@kimfriendship">
+          https://velog.io/@kimfriendship
         </Link>
       </Item>
     </List>
@@ -38,20 +38,34 @@ export default ContactList;
 
 const List = styled.ul`
   margin-bottom: 3rem;
+  width: 100%;
 `;
 
 const Item = styled.li`
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
-  font-size: 1.8rem;
+  margin: 0.5rem 0;
   color: ${({ theme }) => theme.color.point};
 `;
 
+const commonStyle = css`
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+  word-break: break-all;
+`;
+
 const Info = styled.a`
-  margin-left: 1rem;
+  ${commonStyle}
 `;
 
 const Link = styled.a`
-  margin-left: 1rem;
+  ${commonStyle}
+  &:hover,
+  &:focus {
+    outline: none;
+    color: white;
+    background-color: ${({ theme }) => theme.color.point};
+  }
 `;

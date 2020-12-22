@@ -13,6 +13,9 @@ const Heading = () => {
 export default Heading;
 
 const Wrapper = styled.h3`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   font-weight: 600;
   margin-bottom: 3rem;
 `;

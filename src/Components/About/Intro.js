@@ -27,7 +27,7 @@ export default Intro;
 const Wrapper = styled.span``;
 
 const Sentence = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2.5rem;
   margin-bottom: 1rem;
 `;
