@@ -4,14 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
 import "./Style/reset.css";
-import "./Style/theme";
+import theme from "./Style/theme";
 
 ReactDOM.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <App />
-    </BrowserRouter>
-  </ThemeProvider>,
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

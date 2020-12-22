@@ -4,7 +4,7 @@ import { Title, Section } from "../index";
 
 const Project = () => {
   return (
-    <Section id="project">
+    <Section id="project" height="200vh">
       <Title>PROJECT</Title>
     </Section>
   );

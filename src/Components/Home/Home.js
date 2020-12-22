@@ -5,7 +5,9 @@ import { Section } from "../index";
 const Home = () => {
   return (
     <>
-      <Section id="home">THIS IS HOME</Section>
+      <Section id="home" height="100vh">
+        THIS IS HOME
+      </Section>
       <Background />
     </>
   );

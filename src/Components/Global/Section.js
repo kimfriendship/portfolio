@@ -14,8 +14,8 @@ export default Section;
 const Container = styled.section`
   max-width: 1200px;
   width: 100%;
-  height: ${({ height }) => height || "100vh"};
-  padding-top: 15rem;
+  height: ${({ height }) => height || "fit-content"};
+  padding: 15rem 2rem;
   margin: 0 auto;
-  background-color: lavender;
+  /* background-color: lightgoldenrodyellow; */
 `;
