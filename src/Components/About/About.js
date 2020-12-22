@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { Title } from "../Components";
+import { Title } from "../index";
 
-const Project = () => {
+const About = () => {
   return (
-    <Main id="project">
-      <Title>PROJECT</Title>
+    <Main id="about">
+      <Title>ABOUT</Title>
     </Main>
   );
 };
 
-export default Project;
+export default About;
 
 const Main = styled.main`
   width: 100%;
+  height: 100vh;
   padding-top: 15rem;
-  height: 200vh;
 `;
