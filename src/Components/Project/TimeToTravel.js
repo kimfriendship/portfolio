@@ -26,17 +26,15 @@ const TimeToTravel = () => {
           `}
         />
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeInLeft" animateOnce delay={1000}>
-        <Tag
-          name="time-to-travel"
-          date="2020.04.20 - 2020.04.24"
-          position={css`
-            top: 18%;
-            right: 0;
-            text-align: right;
-          `}
-        />
-      </ScrollAnimation>
+      <Tag
+        name="time-to-travel"
+        date="2020.04.20 - 2020.04.24"
+        position={css`
+          top: 18%;
+          right: 0;
+          text-align: right;
+        `}
+      />
     </>
   );
 };

@@ -5,19 +5,22 @@ import ContactList from "./ContactList";
 import Heading from "./Heading";
 import Intro from "./Intro";
 import Image from "./Image";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const About = () => {
   return (
     <Section id="about">
       <Title>ABOUT</Title>
-      <Content>
-        <Image />
-        <Wrapper>
-          <Heading />
-          <ContactList />
-          <Intro />
-        </Wrapper>
-      </Content>
+      <ScrollAnimation animateIn="fadeInUp" animateOnce>
+        <Content>
+          <Image />
+          <Wrapper>
+            <Heading />
+            <ContactList />
+            <Intro />
+          </Wrapper>
+        </Content>
+      </ScrollAnimation>
     </Section>
   );
 };

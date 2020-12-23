@@ -29,21 +29,15 @@ const GhostLeg = () => {
           `}
         />
       </ScrollAnimation>
-      <ScrollAnimation
-        animateIn="fadeInRight"
-        animateOnce
-        style={{ zIndex: "-1000" }}
-      >
-        <Tag
-          name="ghost-leg"
-          date="2020.06.24 - 2020.06.31"
-          position={css`
-            top: 15%;
-            left: 0;
-            z-index: -100;
-          `}
-        />
-      </ScrollAnimation>
+      <Tag
+        name="ghost-leg"
+        date="2020.06.24 - 2020.06.31"
+        position={css`
+          top: 15%;
+          left: 0;
+          z-index: -100;
+        `}
+      />
     </>
   );
 };

@@ -5,7 +5,7 @@ const Title = ({ children }) => {
   return (
     <Text>
       {children}
-      <Deco></Deco>
+      <Deco />
     </Text>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Boree from "../../Asset/boree.jpeg";
-import ScrollAnimation from "react-animate-on-scroll";
 
 const Image = () => {
   return <Pic src={Boree} />;

@@ -1,23 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Tag = ({ name, date, position }) => {
   return (
-    <Wrapper position={position}>
-      <ProjectName>{name}</ProjectName>
-      <Line />
-      <ProjectDate>{date}</ProjectDate>
-    </Wrapper>
+    <ScrollAnimation
+      animateIn="fadeInRight"
+      animateOnce
+      delay={500}
+      style={{ zIndex: -100 }}
+    >
+      <Wrapper position={position}>
+        <ProjectName>{name}</ProjectName>
+        <Line />
+        <ProjectDate>{date}</ProjectDate>
+      </Wrapper>
+    </ScrollAnimation>
   );
 };
 
 export default Tag;
 
 const Wrapper = styled.div`
-  /* background-color: lavender; */
   width: 100%;
-  ${({ position }) => position}
   position: absolute;
+  ${({ position }) => position}
 
   @media ${({ theme }) => theme.size.mobile} {
     width: 100%;
