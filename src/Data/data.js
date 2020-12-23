@@ -1,25 +1,22 @@
 import GL_Game from "../Asset/GL_Game.png";
 import GL_Home from "../Asset/GL_Home.png";
 import GL_Result from "../Asset/GL_Result.png";
-import GL_Thumb from "../Asset/GL_Thumb.png";
 import TTT_Home from "../Asset/TTT_Home.png";
 import TTT_Timeline from "../Asset/TTT_Timeline.png";
 import TTT_Info from "../Asset/TTT_Info.png";
 import TTT_Modal from "../Asset/TTT_Modal.png";
 import TTT_Thumb from "../Asset/TTT_Thumb.png";
-import DND_Home from "../Asset/DND_Home.png";
 import DND_Bookmark from "../Asset/DND_Bookmark.png";
 import DND_Cards from "../Asset/DND_Cards.png";
 import DND_Filter from "../Asset/DND_Filter.png";
 import DND_Map from "../Asset/DND_Map.png";
-import DND_Thumb from "../Asset/DND_Thumb.png";
 import DND_Modal from "../Asset/DND_Modal.png";
 
-export const projectData = [
+const data = [
   {
     id: 1,
     name: "ghost leg",
-    thumbnail: GL_Thumb,
+    // thumbnail: GL_Thumb,
     detail: "캔버스와 리액트를 활용하여 만든 사다리 타기 게임입니다. ",
     date: "2020.12.02 - 2020.12.08",
     topic: "랜덤 사다리 타기",
@@ -59,7 +56,7 @@ export const projectData = [
   {
     id: 2,
     name: "airdnd",
-    thumbnail: DND_Thumb,
+    // thumbnail: DND_Thumb,
     detail:
       "직접 주도하여 프론트와 백 개발자들이 함께 작업한 airbnb 클론 프로젝트입니다.",
     date: "2020.08.03 - 2020.09.11",
@@ -160,3 +157,5 @@ export const projectData = [
     },
   },
 ];
+
+export default data;

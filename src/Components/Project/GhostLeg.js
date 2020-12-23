@@ -11,12 +11,14 @@ const GhostLeg = () => {
     <>
       <BigImg
         src={Big}
+        href="http://localhost:3001/project?name=ghost-leg"
         extraStyle={css`
           margin-left: calc(100% / 3);
         `}
       />
       <SmallImg
         src={Small}
+        href="http://localhost:3001/project?name=ghost-leg"
         position={css`
           bottom: 4rem;
           left: 0;

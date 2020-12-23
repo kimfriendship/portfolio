@@ -9,9 +9,13 @@ import Small from "../../Asset/DND_Small.png";
 const Airdnd = () => {
   return (
     <>
-      <BigImg src={Big} href="http://localhost:3001/#about" width="85%" />
+      <BigImg
+        src={Big}
+        href="http://localhost:3001/project?name=airdnd"
+        width="85%"
+      />
       <SmallImg
-        href="http://localhost:3001/"
+        href="http://localhost:3001/project?name=airdnd"
         src={Small}
         width="30%"
         position={css`

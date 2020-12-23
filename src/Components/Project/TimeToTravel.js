@@ -9,9 +9,13 @@ import Timeline from "../../Asset/TTT_Small.png";
 const TimeToTravel = () => {
   return (
     <>
-      <BigImg src={Home} />
+      <BigImg
+        src={Home}
+        href="http://localhost:3001/project?name=time-to-travel"
+      />
       <SmallImg
         src={Timeline}
+        href="http://localhost:3001/project?name=time-to-travel"
         position={css`
           bottom: -12rem;
           right: 0;
