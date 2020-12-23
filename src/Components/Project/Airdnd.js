@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import { css } from "styled-components";
 import Tag from "./Tag";
 import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";

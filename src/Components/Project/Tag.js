@@ -3,12 +3,22 @@ import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const Tag = ({ name, date, position }) => {
+  const viewPort = window.innerWidth;
+  const isMobile = viewPort <= 700;
+  const mobileStyle = { position: "static" };
+  const pcStyle = {
+    ...position,
+    position: "absolute",
+    width: "100%",
+    zIndex: -100,
+  };
+
   return (
     <ScrollAnimation
       animateIn="flipInX"
       animateOnce
-      delay={800}
-      style={{ ...position, position: "absolute", width: "100%", zIndex: -100 }}
+      delay={isMobile ? 300 : 800}
+      style={isMobile ? mobileStyle : pcStyle}
     >
       <Wrapper>
         <ProjectName>{name}</ProjectName>
@@ -23,11 +33,6 @@ export default Tag;
 
 const Wrapper = styled.div`
   width: 100%;
-
-  @media ${({ theme }) => theme.size.mobile} {
-    width: 100%;
-    position: static;
-  }
 `;
 
 const ProjectName = styled.span`
