@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Airdnd from "./Airdnd";
 import GhostLeg from "./GhostLeg";
 import TimeToTravel from "./TimeToTravel";
+import { debounce } from "lodash";
 
 const ViewChecker = () => {
   const [viewSize, setViewSize] = useState(window.innerWidth);
-  const getViewSize = () => setViewSize(window.innerWidth);
+  const getViewSize = debounce(() => setViewSize(window.innerWidth), 200);
   window.addEventListener("resize", getViewSize);
 
   useEffect(() => {
@@ -43,6 +44,6 @@ const Item = styled.li`
   margin-bottom: ${({ bottom }) => bottom};
 
   @media ${({ theme }) => theme.size.mobile} {
-    margin-bottom: 15rem;
+    margin-bottom: 20%;
   }
 `;
