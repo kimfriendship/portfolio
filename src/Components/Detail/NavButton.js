@@ -17,4 +17,19 @@ const NavButton = ({ direction, event }) => {
 
 export default NavButton;
 
-const Button = styled.button``;
+const Button = styled.button`
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 0 gray;
+  border-radius: 50%;
+  border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    cursor: pointer;
+  }
+`;
