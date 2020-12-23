@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Tag from "./Tag";
 import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";
@@ -10,11 +10,20 @@ const Airdnd = () => {
   return (
     <>
       <BiggerImg src={Big} />
-      <SmallerImg src={Small} />
+      <SmallerImg
+        src={Small}
+        position={css`
+          bottom: 0;
+          right: 0;
+        `}
+      />
       <Tag
-        name="ghost-leg"
-        date="2020.06.24 - 2020.06.31"
-        pos={{ top: "10rem", left: null, right: 0 }}
+        name="airdnd"
+        date="2020.08.01 - 2020.09.11"
+        position={css`
+          bottom: 2rem;
+          left: 0;
+        `}
       />
     </>
   );

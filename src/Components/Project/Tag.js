@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Tag = ({ name, date, pos }) => {
+const Tag = ({ name, date, position }) => {
   return (
-    <Wrapper pos={pos || {}}>
+    <Wrapper position={position}>
       <ProjectName>{name}</ProjectName>
       <Line />
       <ProjectDate>{date}</ProjectDate>
@@ -14,13 +14,11 @@ const Tag = ({ name, date, pos }) => {
 export default Tag;
 
 const Wrapper = styled.div`
-  background-color: lavender;
+  /* background-color: lavender; */
+  ${({ position }) => position}
   position: absolute;
-  top: ${({ pos }) => pos.top || 0};
-  left: ${({ pos }) => pos.left || ""};
-  right: ${({ pos }) => pos.right || ""};
-  text-align: ${({ pos }) => (pos.left === 0 ? "left" : "right")};
   width: 100%;
+  z-index: -10;
 
   @media ${({ theme }) => theme.size.mobile} {
     width: 100%;

@@ -36,7 +36,8 @@ const Item = styled.li`
   /* background-color: lightsteelblue; */
 
   &:nth-of-type(3) {
-    margin-bottom: 0;
+    margin-bottom: 0rem;
+    /* padding-bottom: 10rem; */
   }
 
   @media ${({ theme }) => theme.size.mobile} {

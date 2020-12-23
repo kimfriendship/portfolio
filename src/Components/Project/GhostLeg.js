@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Tag from "./Tag";
 import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";
@@ -9,15 +9,28 @@ import Small from "../../Asset/GL_Small.png";
 const GhostLeg = () => {
   return (
     <>
-      <BigImg src={Big} />
-      <SmallImg src={Small} />
+      <BiggerImg src={Big} />
+      <SmallImg
+        src={Small}
+        position={css`
+          bottom: 4rem;
+          left: 0;
+        `}
+      />
       <Tag
         name="ghost-leg"
         date="2020.06.24 - 2020.06.31"
-        pos={{ top: "10rem", left: null, right: 0 }}
+        position={css`
+          top: 10rem;
+          left: 0;
+        `}
       />
     </>
   );
 };
 
 export default GhostLeg;
+
+const BiggerImg = styled(BigImg)`
+  margin-left: 30%;
+`;
