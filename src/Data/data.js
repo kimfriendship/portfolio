@@ -16,7 +16,6 @@ const data = [
   {
     id: 1,
     name: "ghost-leg",
-    // thumbnail: GL_Thumb,
     detail: "캔버스와 리액트를 활용하여 만든 사다리 타기 게임입니다. ",
     date: "2020.12.02 - 2020.12.08",
     topic: "랜덤 사다리 타기",
@@ -50,14 +49,12 @@ const data = [
       "PC와 Mobile 버전으로 반응형 구현",
     ],
     size: {
-      width: "80%",
-      height: "55rem",
+      paddingBottom: "50%",
     },
   },
   {
     id: 2,
     name: "airdnd",
-    // thumbnail: DND_Thumb,
     detail:
       "직접 주도하여 프론트와 백 개발자들이 함께 작업한 airbnb 클론 프로젝트입니다.",
     date: "2020.08.03 - 2020.09.11",
@@ -110,14 +107,12 @@ const data = [
       "3가지 뷰포트를 기준으로 한 반응형 구현",
     ],
     size: {
-      width: "90%",
-      height: "41rem",
+      paddingBottom: "40%",
     },
   },
   {
     id: 3,
     name: "time-to-travel",
-    thumbnail: TTT_Thumb,
     detail: "바닐라 스크립트로 작성한 여행 스케줄 관리 프로젝트입니다.",
     date: "2020.04.20 - 2020.04.24",
     topic: "여행 스케줄 관리 앱",
@@ -153,10 +148,8 @@ const data = [
       "여행지 정보 제공 및 예약 정보를 저장할 수 있는 기능 구현",
       "여행지별 목록을 나열할 수 있는 기능 구현",
     ],
-    style: {
-      width: "90%",
-      // objectPosition: "right",
-      height: "55rem",
+    size: {
+      paddingBottom: "50%",
     },
   },
 ];

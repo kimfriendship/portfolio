@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useReducer, useEffect, useRef } from "react";
 import Carousel from "./Carousel";
 import actions from "../../Data/constant";
@@ -75,9 +74,9 @@ const CarouselContainer = ({ images, size }) => {
 
   useEffect(() => {
     getImages();
-    getFrameWidth(frameRef.current.clientWidth);
-    console.log(frameRef, frameWidth);
-  }, []);
+    frameRef.current && getFrameWidth(frameRef.current.clientWidth);
+    console.log(frameWidth);
+  }, [frameRef.current]);
 
   return (
     <Carousel

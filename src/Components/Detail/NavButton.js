@@ -8,6 +8,7 @@ const NavButton = ({ direction, event }) => {
     <Button
       type="button"
       onClick={event}
+      direction={direction}
       aria-label={direction ? "다음 사진으로 이동" : "이전 사진으로 이동"}
     >
       {direction ? <NavigateNext size="30" /> : <NavigateBefore size="30" />}
@@ -28,14 +29,14 @@ const Button = styled.button`
   transition: 0.2s ease-in;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
+  margin: ${({ direction }) => (direction ? "0 0 0 1rem" : "0 1rem 0 0")};
 
   &:hover,
   &:focus {
     outline: none;
-    cursor: pointer;
     color: white;
     background-color: gray;
-    transform: scale(1.2);
     transition: 0.2s ease-in;
   }
 `;

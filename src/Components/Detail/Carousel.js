@@ -17,26 +17,24 @@ const Carousel = forwardRef(({ state, size, events, frameWidth }, ref) => {
   return (
     <Wrapper>
       <NavButton direction={0} event={moveBefore} />
-      <Frame style={size} ref={ref}>
-        {renderArray.map(({ src, alt, caption }, i) => (
-          <Figure key={i}>
-            <Image
-              src={src}
-              alt={alt}
-              frameWidth={frameWidth}
-              isMovingNext={isMovingNext}
-              isMovingBefore={isMovingBefore}
-            />
-            <Caption>
-              <Indicies>
-                {Array.from({ length: count }).map((_, i) => (
-                  <Index key={i} isCurrent={currentIdx === i} />
-                ))}
-              </Indicies>
-              <Span>{caption}</Span>
-            </Caption>
-          </Figure>
-        ))}
+      <Frame size={size}>
+        <FigureList
+          ref={ref}
+          frameWidth={frameWidth}
+          isMovingNext={isMovingNext}
+          isMovingBefore={isMovingBefore}
+        >
+          {renderArray.map(({ src, alt, caption }, i) => (
+            <Figure key={i} frameWidth={frameWidth}>
+              <Image src={src} alt={alt} />
+            </Figure>
+          ))}
+        </FigureList>
+        <Indicies>
+          {Array.from({ length: count }).map((_, i) => (
+            <Index key={i} isCurrent={currentIdx === i} />
+          ))}
+        </Indicies>
       </Frame>
       <NavButton direction={1} event={moveNext} />
     </Wrapper>
@@ -48,7 +46,6 @@ export default Carousel;
 const slideBefore = (width) => keyframes`
   0% {
     transform: ${`translate3d(-${width}px, 0, 0)`};
-    /* transform: translate3d(-600px, 0, 0); */
   }
   100% {
     transform: translate3d(0, 0, 0);
@@ -61,9 +58,8 @@ const slideNext = (width) => keyframes`{
   }
   100% {
     transform: ${`translate3d(-${width}px, 0, 0)`};
-    /* transform: translate3d(-600px, 0, 0); */
   }
-`;
+  `;
 
 const Wrapper = styled.div`
   display: flex;
@@ -73,22 +69,19 @@ const Wrapper = styled.div`
 `;
 
 const Frame = styled.div`
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  border-radius: 10px;
-`;
-
-const Figure = styled.figure`
-  min-width: 100%;
-  width: 100%;
-  margin: 0 auto;
   position: relative;
+  overflow: hidden;
+  width: 80%;
+  height: 0;
+  padding-bottom: ${({ size }) => size.paddingBottom};
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: lavender;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  object-fit: cover;
+const FigureList = styled.ul`
+  display: flex;
+  position: absolute;
   ${({ isMovingBefore, isMovingNext, frameWidth }) => {
     if (isMovingBefore)
       return css`
@@ -101,32 +94,32 @@ const Image = styled.img`
   }}
 `;
 
-const Caption = styled.figcaption`
-  position: absolute;
-  bottom: 0;
-  left: 0;
+const Figure = styled.li`
+  min-width: 100%;
   width: 100%;
-  height: 4rem;
-  text-align: center;
-  background-color: black;
-  opacity: 0.6;
+  height: ${({ frameWidth }) => `${frameWidth * 0.55}px`};
 `;
 
-const Span = styled.span`
-  font-size: 1.6rem;
-  color: white;
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
 `;
 
 const Indicies = styled.ul`
-  margin: 0.5rem auto 0.7rem;
-  width: 5rem;
+  position: absolute;
+  bottom: 0;
+  height: 2rem;
+  width: 100%;
+  text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const Index = styled.li`
   background-color: ${({ isCurrent }) => (isCurrent ? "white" : "gray")};
-  width: 0.5rem;
-  height: 0.5rem;
+  border: ${({ isCurrent }) => `1px solid ${isCurrent ? "lightgray" : "none"}`};
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
+  margin: 0 0.5rem;
 `;
