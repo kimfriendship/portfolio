@@ -49,7 +49,8 @@ const data = [
       "최적화를 통해 리렌더링 최소화 및 성능 향상",
       "PC와 Mobile 버전으로 반응형 구현",
     ],
-    style: {
+    size: {
+      width: "80%",
       height: "55rem",
     },
   },
@@ -67,7 +68,7 @@ const data = [
       "React",
       "Redux",
       "Redux-Thunk",
-      "Styled-Component",
+      "sized-Component",
     ],
     github: "https://github.com/kimfriendship/airdnd-frontend",
     page: "",
@@ -108,7 +109,8 @@ const data = [
       "검색 조건을 query로 관리하여 refresh 되더라도 상태 유지",
       "3가지 뷰포트를 기준으로 한 반응형 구현",
     ],
-    style: {
+    size: {
+      width: "90%",
       height: "41rem",
     },
   },
@@ -152,7 +154,8 @@ const data = [
       "여행지별 목록을 나열할 수 있는 기능 구현",
     ],
     style: {
-      objectPosition: "right",
+      width: "90%",
+      // objectPosition: "right",
       height: "55rem",
     },
   },

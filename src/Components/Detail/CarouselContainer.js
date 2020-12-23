@@ -1,4 +1,5 @@
-import React, { useReducer, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useReducer, useEffect, useRef } from "react";
 import Carousel from "./Carousel";
 import actions from "../../Data/constant";
 
@@ -53,9 +54,11 @@ const reducer = (state, action) => {
   }
 };
 
-const CarouselContainer = ({ images, imageStyle }) => {
+const CarouselContainer = ({ images, size }) => {
   const [state, dispatch] = useReducer(reducer, initState);
-  const { fullArray, isMovingNext, isMovingBefore, currentIdx } = state;
+  const { isMovingNext, isMovingBefore, currentIdx } = state;
+  const [frameWidth, getFrameWidth] = useState(null);
+  const frameRef = useRef(null);
 
   const getImages = () => dispatch({ type: GET_IMAGES, images });
   const moveNext = () => dispatch({ type: MOVE_NEXT });
@@ -68,14 +71,21 @@ const CarouselContainer = ({ images, imageStyle }) => {
 
   useEffect(() => {
     (isMovingNext || isMovingBefore) && endMove();
-    !fullArray.length && getImages();
   }, [isMovingNext, isMovingBefore]);
+
+  useEffect(() => {
+    getImages();
+    getFrameWidth(frameRef.current.clientWidth);
+    console.log(frameRef, frameWidth);
+  }, []);
 
   return (
     <Carousel
       state={state}
-      imageStyle={imageStyle}
+      size={size}
       events={{ moveNext, moveBefore }}
+      frameWidth={frameWidth}
+      ref={frameRef}
     />
   );
 };

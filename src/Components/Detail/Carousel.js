@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { keyframes, css } from "styled-components";
 import NavButton from "./NavButton";
 
-const Carousel = ({ state, imageStyle, events }) => {
+const Carousel = forwardRef(({ state, size, events, frameWidth }, ref) => {
   const {
     renderArray,
     isMovingNext,
@@ -11,18 +11,19 @@ const Carousel = ({ state, imageStyle, events }) => {
     currentIdx,
   } = state;
   const { moveNext, moveBefore } = events;
+  console.log(frameWidth);
 
   if (!count) return null;
   return (
     <Wrapper>
       <NavButton direction={0} event={moveBefore} />
-      <Frame>
+      <Frame style={size} ref={ref}>
         {renderArray.map(({ src, alt, caption }, i) => (
           <Figure key={i}>
             <Image
-              style={imageStyle}
               src={src}
               alt={alt}
+              frameWidth={frameWidth}
               isMovingNext={isMovingNext}
               isMovingBefore={isMovingBefore}
             />
@@ -40,26 +41,26 @@ const Carousel = ({ state, imageStyle, events }) => {
       <NavButton direction={1} event={moveNext} />
     </Wrapper>
   );
-};
+});
 
 export default Carousel;
 
-const slideBefore = keyframes`
+const slideBefore = (width) => keyframes`
   0% {
-    transform: translate3d(-1080px, 0, 0);
+    transform: ${`translate3d(-${width}px, 0, 0)`};
     /* transform: translate3d(-600px, 0, 0); */
   }
   100% {
     transform: translate3d(0, 0, 0);
   }
-`;
+  `;
 
-const slideNext = keyframes`{
+const slideNext = (width) => keyframes`{
   0% {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-1080px, 0, 0);
+    transform: ${`translate3d(-${width}px, 0, 0)`};
     /* transform: translate3d(-600px, 0, 0); */
   }
 `;
@@ -73,28 +74,29 @@ const Wrapper = styled.div`
 
 const Frame = styled.div`
   margin: 0 auto;
-  width: 90%;
-  border-radius: 10px;
-  position: relative;
   overflow: hidden;
   display: flex;
+  border-radius: 10px;
 `;
 
 const Figure = styled.figure`
   min-width: 100%;
   width: 100%;
+  margin: 0 auto;
+  position: relative;
 `;
 
 const Image = styled.img`
   width: 100%;
-  ${({ isMovingBefore, isMovingNext }) => {
+  object-fit: cover;
+  ${({ isMovingBefore, isMovingNext, frameWidth }) => {
     if (isMovingBefore)
       return css`
-        animation: ${slideBefore} 0.3s forwards;
+        animation: ${slideBefore(frameWidth)} 0.3s forwards;
       `;
     if (isMovingNext)
       return css`
-        animation: ${slideNext} 0.3s forwards;
+        animation: ${slideNext(frameWidth)} 0.3s forwards;
       `;
   }}
 `;

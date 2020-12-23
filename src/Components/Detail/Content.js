@@ -6,11 +6,11 @@ import Info from "./Info";
 import TechStack from "./TechStack";
 
 const Content = ({ project }) => {
-  const { features, techStack, images } = project;
+  const { features, techStack, images, size } = project;
 
   return (
     <Wrapper>
-      <CarouselContainer images={images} />
+      <CarouselContainer images={images} size={size} />
       <Info project={project} />
       <Features features={features} />
       <TechStack techStack={techStack} />
