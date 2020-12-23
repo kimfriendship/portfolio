@@ -12,15 +12,27 @@ import { Webpack } from "@styled-icons/simple-icons/Webpack";
 
 const Tech = () => {};
 
-const TechStack = ({ project }) => {
-  const { techStack } = project;
-  return <List>{techStack}</List>;
+const TechStack = ({ techStack }) => {
+  return (
+    <>
+      <Heading>Tech Stack</Heading>
+      <List>{techStack}</List>
+    </>
+  );
 };
 
 export default TechStack;
 
 const List = styled.ul`
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
   display: flex;
 `;
 
 const Item = styled.li``;
+
+const Heading = styled.h3`
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 4rem;
+`;

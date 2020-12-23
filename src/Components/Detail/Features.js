@@ -23,8 +23,8 @@ const Heading = styled.h3`
 `;
 
 const List = styled.ul`
-  padding: 1rem;
-  margin-top: 1rem;
+  padding: 0 1rem;
+  margin-top: 2rem;
 `;
 
 const Item = styled.li`

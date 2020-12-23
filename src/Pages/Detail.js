@@ -7,11 +7,12 @@ const Detail = () => {
   const { search } = useLocation();
   const projectName = search.split("=")[1];
   const [project] = data.filter(({ name }) => name === projectName);
+  const title = projectName.split("-").join("  ").toUpperCase();
 
   return (
     <>
       <Section>
-        <Title>{projectName}</Title>
+        <Title>{title}</Title>
         <Content project={project} />
       </Section>
     </>

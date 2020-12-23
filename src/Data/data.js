@@ -15,7 +15,7 @@ import DND_Modal from "../Asset/DND_Modal.png";
 const data = [
   {
     id: 1,
-    name: "ghost leg",
+    name: "ghost-leg",
     // thumbnail: GL_Thumb,
     detail: "캔버스와 리액트를 활용하여 만든 사다리 타기 게임입니다. ",
     date: "2020.12.02 - 2020.12.08",
@@ -114,7 +114,7 @@ const data = [
   },
   {
     id: 3,
-    name: "time to travel",
+    name: "time-to-travel",
     thumbnail: TTT_Thumb,
     detail: "바닐라 스크립트로 작성한 여행 스케줄 관리 프로젝트입니다.",
     date: "2020.04.20 - 2020.04.24",
