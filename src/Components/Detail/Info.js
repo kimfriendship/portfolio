@@ -7,7 +7,6 @@ import { PeopleFill } from "@styled-icons/bootstrap/PeopleFill";
 
 const Info = ({ project }) => {
   const { detail, date, member, github, page } = project;
-  console.log(project);
 
   return (
     <>
