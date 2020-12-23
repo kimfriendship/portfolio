@@ -35,9 +35,8 @@ const Item = styled.li`
   position: relative;
   max-height: 700px;
   margin-bottom: ${({ bottom }) => bottom};
-  /* background-color: lightsteelblue; */
 
   @media ${({ theme }) => theme.size.mobile} {
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
   }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import { css } from "styled-components";
 import Tag from "./Tag";
 import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";
@@ -29,11 +29,12 @@ const TimeToTravel = () => {
       <Tag
         name="time-to-travel"
         date="2020.04.20 - 2020.04.24"
-        position={css`
-          top: 18%;
-          right: 0;
-          text-align: right;
-        `}
+        animation="fadeInLeft"
+        position={{
+          top: "18%",
+          right: 0,
+          textAlign: "right",
+        }}
       />
     </>
   );

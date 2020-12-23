@@ -17,14 +17,6 @@ const Airdnd = () => {
           width="85%"
         />
       </ScrollAnimation>
-      <Tag
-        name="airdnd"
-        date="2020.08.01 - 2020.09.11"
-        position={css`
-          bottom: -8rem;
-          left: 0;
-        `}
-      />
       <ScrollAnimation animateIn="fadeInRight" animateOnce>
         <SmallImg
           href="http://localhost:3001/project?name=airdnd"
@@ -36,6 +28,15 @@ const Airdnd = () => {
           `}
         />
       </ScrollAnimation>
+      <Tag
+        name="airdnd"
+        date="2020.08.01 - 2020.09.11"
+        animation="fadeInRight"
+        position={{
+          bottom: "-8rem",
+          left: 0,
+        }}
+      />
     </>
   );
 };
