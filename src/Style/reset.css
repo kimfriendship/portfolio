@@ -157,3 +157,6 @@ path {
 html {
   font-size: 10px;
 }
+#root {
+  padding: 0 2rem;
+}

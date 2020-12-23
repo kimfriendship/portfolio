@@ -11,11 +11,9 @@ const Content = ({ project }) => {
   return (
     <Wrapper>
       <CarouselContainer images={images} />
-      <Block>
-        <Info project={project} />
-        <Features features={features} />
-        <TechStack techStack={techStack} />
-      </Block>
+      <Info project={project} />
+      <Features features={features} />
+      <TechStack techStack={techStack} />
     </Wrapper>
   );
 };
@@ -23,10 +21,10 @@ const Content = ({ project }) => {
 export default Content;
 
 const Wrapper = styled.div`
-  background-color: lavender;
+  /* background-color: lavender; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 10rem;
+  flex-direction: column;
+  margin-top: 5rem;
 `;
-
-const Block = styled.div``;

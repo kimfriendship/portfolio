@@ -41,15 +41,16 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  height: 2.5rem;
   & > span,
   & > a {
     margin-left: 1rem;
+    line-height: 2.5rem;
   }
 `;
 
 const Span = styled.span`
   font-size: 1.6rem;
+  line-height: 2.5rem;
 `;
 
 const Anchor = styled.a`

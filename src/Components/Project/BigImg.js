@@ -37,6 +37,6 @@ const Link = styled.a`
 
   @media ${({ theme }) => theme.size.mobile} {
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
   }
 `;

@@ -15,7 +15,6 @@ const Container = styled.section`
   max-width: 1200px;
   width: 100%;
   height: ${({ height }) => height || "fit-content"};
-  padding: 15rem 2rem;
+  padding: 15rem 0;
   margin: 0 auto;
-  /* background-color: lightgoldenrodyellow; */
 `;

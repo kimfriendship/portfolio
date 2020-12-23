@@ -28,7 +28,7 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  height: 2.5rem;
+  line-height: 2.5rem;
   font-size: 1.6rem;
   list-style: "-";
   padding: 0 1rem;

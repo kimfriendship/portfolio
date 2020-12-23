@@ -10,7 +10,7 @@ const NavButton = ({ direction, event }) => {
       onClick={event}
       aria-label={direction ? "다음 사진으로 이동" : "이전 사진으로 이동"}
     >
-      {direction ? <NavigateNext size="40" /> : <NavigateBefore size="40" />}
+      {direction ? <NavigateNext size="30" /> : <NavigateBefore size="30" />}
     </Button>
   );
 };
@@ -18,12 +18,14 @@ const NavButton = ({ direction, event }) => {
 export default NavButton;
 
 const Button = styled.button`
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   box-shadow: 1px 1px 5px 0 gray;
+  transition: 0.2s ease-in;
   border-radius: 50%;
   border: none;
 
@@ -31,5 +33,9 @@ const Button = styled.button`
   &:focus {
     outline: none;
     cursor: pointer;
+    color: white;
+    background-color: gray;
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
   }
 `;

@@ -63,7 +63,7 @@ const CarouselContainer = ({ images, imageStyle }) => {
   const endMove = () =>
     setTimeout(
       () => dispatch({ type: END_MOVE, newArray: [images[currentIdx]] }),
-      500
+      300
     );
 
   useEffect(() => {

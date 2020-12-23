@@ -13,7 +13,7 @@ const GhostLeg = () => {
         src={Big}
         href="http://localhost:3001/project?name=ghost-leg"
         extraStyle={css`
-          margin-left: calc(100% / 3);
+          margin-left: calc(100% / 4);
         `}
       />
       <SmallImg
