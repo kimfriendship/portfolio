@@ -39,4 +39,9 @@ const Button = styled.button`
     background-color: gray;
     transition: 0.2s ease-in;
   }
+
+  @media ${({ theme }) => theme.size.mobile} {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `;

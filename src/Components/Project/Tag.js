@@ -15,10 +15,9 @@ export default Tag;
 
 const Wrapper = styled.div`
   /* background-color: lavender; */
+  width: 100%;
   ${({ position }) => position}
   position: absolute;
-  width: 100%;
-  z-index: -10;
 
   @media ${({ theme }) => theme.size.mobile} {
     width: 100%;

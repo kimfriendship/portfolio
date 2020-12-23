@@ -76,7 +76,7 @@ const Frame = styled.div`
   padding-bottom: ${({ size }) => size.paddingBottom};
   margin: 0 auto;
   border-radius: 10px;
-  background-color: lavender;
+  /* background-color: lightgray; */
 `;
 
 const FigureList = styled.ul`
@@ -108,11 +108,15 @@ const Image = styled.img`
 const Indicies = styled.ul`
   position: absolute;
   bottom: 0;
-  height: 2rem;
+  height: 5%;
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    height: 8%;
+  }
 `;
 
 const Index = styled.li`
@@ -122,4 +126,9 @@ const Index = styled.li`
   height: 0.8rem;
   border-radius: 50%;
   margin: 0 0.5rem;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
 `;
