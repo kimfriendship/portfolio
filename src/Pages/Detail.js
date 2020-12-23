@@ -6,7 +6,7 @@ import data from "../Data/data";
 const Detail = () => {
   const { search } = useLocation();
   const projectName = search.split("=")[1];
-  const project = data.filter(({ name }) => name === projectName);
+  const [project] = data.filter(({ name }) => name === projectName);
 
   return (
     <>

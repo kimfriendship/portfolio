@@ -7,31 +7,47 @@ import { PeopleFill } from "@styled-icons/bootstrap/PeopleFill";
 
 const Info = ({ project }) => {
   const { detail, date, member, github, page } = project;
+  console.log(project);
 
   return (
     <>
       <Span>{detail}</Span>
-      <Span>
-        <Calendar size="20" />
-        {date}
-      </Span>
-      <Span>
-        <PeopleFill size="20" />
-        {member} 프로젝트
-      </Span>
-      <Span>
-        <Github size="20" />
-        <Anchor href={github}>Repository 바로가기</Anchor>
-      </Span>
-      <Span>
-        <Link size="20" />
-        <Anchor href={page}>페이지 바로가기</Anchor>
-      </Span>
+      <List>
+        <Item>
+          <Calendar size="20" />
+          <Span>{date}</Span>
+        </Item>
+        <Item>
+          <PeopleFill size="20" />
+          <Span>{member} 프로젝트</Span>
+        </Item>
+        <Item>
+          <Github size="20" />
+          <Anchor href={github}>Repository 바로가기</Anchor>
+        </Item>
+        <Item>
+          <Link size="20" />
+          <Anchor href={page}>페이지 바로가기</Anchor>
+        </Item>
+      </List>
     </>
   );
 };
 
 export default Info;
+
+const List = styled.ul`
+  font-size: 1.6rem;
+  margin-top: 2rem;
+`;
+
+const Item = styled.li`
+  height: 2.5rem;
+  & > span,
+  & > a {
+    margin-left: 1rem;
+  }
+`;
 
 const Span = styled.span`
   font-size: 1.6rem;
@@ -39,4 +55,10 @@ const Span = styled.span`
 
 const Anchor = styled.a`
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: ${({ theme }) => theme.color.point};
+  }
 `;
