@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-const SmallImg = ({ src }) => {
-  return <Img src={src} />;
+const SmallImg = ({ src, ...rest }) => {
+  return <Img src={src} {...rest} />;
 };
 
 export default SmallImg;
 
 const Img = styled.img`
+  width: 50%;
   box-shadow: 0 3px 10px 0 lightgray;
-  width: 40%;
   position: absolute;
-  /* height: 30rem;
-  object-fit: cover; */
+  bottom: 0;
+  right: 0;
 
   @media ${({ theme }) => theme.size.mobile} {
     display: none;

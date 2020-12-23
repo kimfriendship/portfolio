@@ -3,14 +3,14 @@ import styled from "styled-components";
 import Tag from "./Tag";
 import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";
-import Home from "../../Asset/DND_Map.png";
-import Cards from "../../Asset/DND_Cards.png";
+import Big from "../../Asset/DND_Big.png";
+import Small from "../../Asset/DND_Small.png";
 
 const Airdnd = () => {
   return (
     <>
-      <BigImg src={Home} />
-      <SmallImg src={Cards} />
+      <BiggerImg src={Big} />
+      <SmallerImg src={Small} />
       <Tag
         name="ghost-leg"
         date="2020.06.24 - 2020.06.31"
@@ -21,3 +21,16 @@ const Airdnd = () => {
 };
 
 export default Airdnd;
+
+const BiggerImg = styled(BigImg)`
+  width: 85%;
+  margin-bottom: 10rem;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    width: 100%;
+  }
+`;
+
+const SmallerImg = styled(SmallImg)`
+  width: 30%;
+`;

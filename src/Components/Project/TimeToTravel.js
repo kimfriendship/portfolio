@@ -3,8 +3,8 @@ import styled from "styled-components";
 import Tag from "./Tag";
 import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";
-import Home from "../../Asset/TTT_Home.png";
-import Timeline from "../../Asset/TTT_Timeline.png";
+import Home from "../../Asset/TTT_Big.png";
+import Timeline from "../../Asset/TTT_Small.png";
 
 const TimeToTravel = () => {
   return (

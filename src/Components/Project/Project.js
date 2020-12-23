@@ -11,10 +11,10 @@ const Project = () => {
       <Title>PROJECT</Title>
       <List>
         <Item>
-          <GhostLeg />
+          <Airdnd />
         </Item>
         <Item>
-          <Airdnd />
+          <GhostLeg />
         </Item>
         <Item>
           <TimeToTravel />
@@ -26,19 +26,20 @@ const Project = () => {
 
 export default Project;
 
-const List = styled.ul`
-  /* margin-top: 10rem; */
-`;
+const List = styled.ul``;
 
 const Item = styled.li`
-  position: relative;
   width: 100%;
-  height: calc(100vw * 0.43);
+  position: relative;
   max-height: 700px;
-  margin: 10rem 0;
-  background-color: lightsteelblue;
+  margin: 10rem 0 15rem;
+  /* background-color: lightsteelblue; */
+
+  &:nth-of-type(3) {
+    margin-bottom: 0;
+  }
 
   @media ${({ theme }) => theme.size.mobile} {
-    /* height:  */
+    margin: 10rem 0 5rem;
   }
 `;

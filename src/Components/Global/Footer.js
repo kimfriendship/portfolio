@@ -11,4 +11,6 @@ const Foot = styled.footer`
   width: 100%;
   font-size: 1.3rem;
   text-align: center;
+  height: 4rem;
+  line-height: 4rem;
 `;
