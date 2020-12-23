@@ -21,7 +21,7 @@ const GhostLeg = () => {
         name="ghost-leg"
         date="2020.06.24 - 2020.06.31"
         position={css`
-          top: 10rem;
+          top: 15%;
           left: 0;
         `}
       />
@@ -33,4 +33,8 @@ export default GhostLeg;
 
 const BiggerImg = styled(BigImg)`
   margin-left: 30%;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    margin-left: 0;
+  }
 `;

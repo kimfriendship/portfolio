@@ -32,10 +32,10 @@ const ProjectName = styled.span`
 `;
 
 const ProjectDate = styled.span`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 `;
 
 const Line = styled.hr`
   width: 100%;
-  margin: 1rem 0;
+  margin: 1% 0;
 `;

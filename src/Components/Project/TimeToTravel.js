@@ -21,7 +21,7 @@ const TimeToTravel = () => {
         name="time-to-travel"
         date="2020.04.20 - 2020.04.24"
         position={css`
-          top: 13rem;
+          top: 18%;
           right: 0;
           text-align: right;
         `}
@@ -34,4 +34,8 @@ export default TimeToTravel;
 
 const BiggerImg = styled(BigImg)`
   margin-bottom: 10rem;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    margin-bottom: 2rem;
+  }
 `;

@@ -37,6 +37,7 @@ const BiggerImg = styled(BigImg)`
 
   @media ${({ theme }) => theme.size.mobile} {
     width: 100%;
+    margin-bottom: 2rem;
   }
 `;
 
