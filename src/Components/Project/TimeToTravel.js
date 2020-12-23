@@ -9,11 +9,11 @@ import Timeline from "../../Asset/TTT_Small.png";
 const TimeToTravel = () => {
   return (
     <>
-      <BiggerImg src={Home} />
+      <BigImg src={Home} />
       <SmallImg
         src={Timeline}
         position={css`
-          bottom: -4rem;
+          bottom: -12rem;
           right: 0;
         `}
       />
@@ -31,11 +31,3 @@ const TimeToTravel = () => {
 };
 
 export default TimeToTravel;
-
-const BiggerImg = styled(BigImg)`
-  margin-bottom: 10rem;
-
-  @media ${({ theme }) => theme.size.mobile} {
-    margin-bottom: 2rem;
-  }
-`;

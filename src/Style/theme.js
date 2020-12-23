@@ -1,6 +1,6 @@
 const theme = {
   color: {
-    point: "darkcyan",
+    point: "lightseagreen",
     html: "#E24F27",
     css: "#1472B6",
     js: "#EFC332",

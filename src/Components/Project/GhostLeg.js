@@ -9,7 +9,12 @@ import Small from "../../Asset/GL_Small.png";
 const GhostLeg = () => {
   return (
     <>
-      <BiggerImg src={Big} />
+      <BigImg
+        src={Big}
+        extraStyle={css`
+          margin-left: calc(100% / 3);
+        `}
+      />
       <SmallImg
         src={Small}
         position={css`
@@ -30,11 +35,3 @@ const GhostLeg = () => {
 };
 
 export default GhostLeg;
-
-const BiggerImg = styled(BigImg)`
-  margin-left: 30%;
-
-  @media ${({ theme }) => theme.size.mobile} {
-    margin-left: 0;
-  }
-`;

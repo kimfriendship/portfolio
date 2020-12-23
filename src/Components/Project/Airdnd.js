@@ -9,11 +9,13 @@ import Small from "../../Asset/DND_Small.png";
 const Airdnd = () => {
   return (
     <>
-      <BiggerImg src={Big} />
-      <SmallerImg
+      <BigImg src={Big} href="http://localhost:3001/#about" width="85%" />
+      <SmallImg
+        href="http://localhost:3001/"
         src={Small}
+        width="30%"
         position={css`
-          bottom: 0;
+          bottom: -10rem;
           right: 0;
         `}
       />
@@ -21,7 +23,7 @@ const Airdnd = () => {
         name="airdnd"
         date="2020.08.01 - 2020.09.11"
         position={css`
-          bottom: 2rem;
+          bottom: -8rem;
           left: 0;
         `}
       />
@@ -30,17 +32,3 @@ const Airdnd = () => {
 };
 
 export default Airdnd;
-
-const BiggerImg = styled(BigImg)`
-  width: 85%;
-  margin-bottom: 10rem;
-
-  @media ${({ theme }) => theme.size.mobile} {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-`;
-
-const SmallerImg = styled(SmallImg)`
-  width: 30%;
-`;

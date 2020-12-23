@@ -10,13 +10,13 @@ const Project = () => {
     <Section id="project">
       <Title>PROJECT</Title>
       <List>
-        <Item>
+        <Item bottom="30rem">
           <Airdnd />
         </Item>
-        <Item>
+        <Item bottom="20rem">
           <GhostLeg />
         </Item>
-        <Item>
+        <Item bottom="10rem">
           <TimeToTravel />
         </Item>
       </List>
@@ -26,21 +26,18 @@ const Project = () => {
 
 export default Project;
 
-const List = styled.ul``;
+const List = styled.ul`
+  margin-top: 10rem;
+`;
 
 const Item = styled.li`
   width: 100%;
   position: relative;
   max-height: 700px;
-  margin: 10rem 0 15rem;
+  margin-bottom: ${({ bottom }) => bottom};
   /* background-color: lightsteelblue; */
 
-  &:nth-of-type(3) {
-    margin-bottom: 0rem;
-    /* padding-bottom: 10rem; */
-  }
-
   @media ${({ theme }) => theme.size.mobile} {
-    margin: 10rem 0 5rem;
+    margin-bottom: 10rem;
   }
 `;
