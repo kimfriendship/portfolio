@@ -9,7 +9,7 @@ const BigImg = ({ href, src, width, extraStyle }) => {
   );
 };
 
-export default BigImg;
+export default React.memo(BigImg);
 
 const Img = styled.img`
   width: 100%;

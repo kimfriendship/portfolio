@@ -9,7 +9,7 @@ const SmallImg = ({ href, src, position, width }) => {
   );
 };
 
-export default SmallImg;
+export default React.memo(SmallImg);
 
 const Img = styled.img`
   width: 100%;
