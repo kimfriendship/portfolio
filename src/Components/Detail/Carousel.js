@@ -27,19 +27,12 @@ const Carousel = ({ state, imageStyle, events }) => {
               isMovingBefore={isMovingBefore}
             />
             <Caption>
-              <ul>
+              <Indicies>
                 {Array.from({ length: count }).map((_, i) => (
-                  <li
-                    key={i}
-                    style={{
-                      backgroundColor: `${
-                        currentIdx === i ? "white" : "black"
-                      }`,
-                    }}
-                  />
+                  <Index key={i} isCurrent={currentIdx === i} />
                 ))}
-              </ul>
-              <span>{caption}</span>
+              </Indicies>
+              <Span>{caption}</Span>
             </Caption>
           </Figure>
         ))}
@@ -112,9 +105,26 @@ const Caption = styled.figcaption`
   left: 0;
   width: 100%;
   height: 4rem;
-  font-size: 1.6rem;
   text-align: center;
-  color: white;
   background-color: black;
   opacity: 0.6;
+`;
+
+const Span = styled.span`
+  font-size: 1.6rem;
+  color: white;
+`;
+
+const Indicies = styled.ul`
+  margin: 0.5rem auto 0.7rem;
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Index = styled.li`
+  background-color: ${({ isCurrent }) => (isCurrent ? "white" : "gray")};
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
 `;
