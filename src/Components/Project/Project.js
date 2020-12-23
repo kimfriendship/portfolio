@@ -27,11 +27,18 @@ const Project = () => {
 export default Project;
 
 const List = styled.ul`
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 `;
 
 const Item = styled.li`
   position: relative;
   width: 100%;
-  /* background-color: lavender; */
+  height: calc(100vw * 0.43);
+  max-height: 700px;
+  margin: 10rem 0;
+  background-color: lightsteelblue;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    /* height:  */
+  }
 `;
