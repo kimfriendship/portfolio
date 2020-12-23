@@ -32,7 +32,7 @@ const GhostLeg = () => {
       <Tag
         name="ghost-leg"
         date="2020.06.24 - 2020.06.31"
-        animation="fadeInRight"
+        // animation="fadeInRight"
         position={{
           top: "15%",
           left: 0,

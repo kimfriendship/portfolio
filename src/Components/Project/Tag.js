@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const Tag = ({ name, date, position, animation }) => {
+const Tag = ({ name, date, position }) => {
   return (
     <ScrollAnimation
-      animateIn={animation}
+      animateIn="flipInX"
       animateOnce
+      delay={800}
       style={{ ...position, position: "absolute", width: "100%", zIndex: -100 }}
     >
       <Wrapper>

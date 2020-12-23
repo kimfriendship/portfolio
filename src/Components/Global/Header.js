@@ -5,11 +5,8 @@ import styled from "styled-components";
 
 const Header = () => {
   const location = useLocation();
-  // const isHome = ["/", "/#home"].includes(location.pathname);
-  const isHome = false;
-  const activeStyle = {
-    borderBottom: `2px solid ${isHome ? "white" : "black"}`,
-  };
+  const { pathname: path, hash } = location;
+  const isHome = (path === "/" && hash === "#home") || (path === "/" && !hash);
 
   return (
     <Background isHome={isHome}>
@@ -18,13 +15,13 @@ const Header = () => {
           <HomeLink href="localhost:3001">kimFriendship</HomeLink>
         </Logo>
         <Nav isHome={isHome}>
-          <NavHashLink smooth to="/#home" activeStyle={activeStyle}>
+          <NavHashLink smooth to="/#home" activeClassName="active">
             HOME
           </NavHashLink>
-          <NavHashLink smooth to="/#about" activeStyle={activeStyle}>
+          <NavHashLink smooth to="/#about" activeClassName="active">
             ABOUT
           </NavHashLink>
-          <NavHashLink smooth to="/#project" activeStyle={activeStyle}>
+          <NavHashLink smooth to="/#project" activeClassName="active">
             PROJECT
           </NavHashLink>
         </Nav>
@@ -70,8 +67,30 @@ const Nav = styled.nav`
   font-weight: 600;
   color: ${({ isHome }) => (isHome ? "white" : "black")};
 
+  .active {
+    border-bottom: ${({ isHome }) => `2px solid ${isHome ? "white" : "black"}`};
+
+    &::after {
+      display: none;
+    }
+  }
+
   & * {
-    padding: 0.2rem 0;
     margin-left: 2rem;
+
+    &::after {
+      display: block;
+      content: " ";
+      padding: 0.2rem 0;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+      border-bottom: ${({ isHome }) =>
+        `2px solid ${isHome ? "white" : "black"}`};
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: scaleX(1);
+    }
   }
 `;

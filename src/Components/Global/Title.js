@@ -24,8 +24,8 @@ const Deco = styled.span`
   display: block;
   position: absolute;
   bottom: 0;
-  left: -15%;
-  width: 130%;
+  left: -10%;
+  width: 120%;
   height: 1.5rem;
   background-color: ${({ theme }) => theme.color.point};
   opacity: 0.5;

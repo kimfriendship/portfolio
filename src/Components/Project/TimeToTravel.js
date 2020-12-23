@@ -29,7 +29,7 @@ const TimeToTravel = () => {
       <Tag
         name="time-to-travel"
         date="2020.04.20 - 2020.04.24"
-        animation="fadeInLeft"
+        // animation="fadeInLeft"
         position={{
           top: "18%",
           right: 0,

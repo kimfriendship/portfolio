@@ -31,7 +31,7 @@ const Airdnd = () => {
       <Tag
         name="airdnd"
         date="2020.08.01 - 2020.09.11"
-        animation="fadeInRight"
+        // animation="fadeInRight"
         position={{
           bottom: "-8rem",
           left: 0,
