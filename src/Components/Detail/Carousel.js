@@ -40,7 +40,7 @@ const Carousel = forwardRef(({ state, size, events, frameWidth }, ref) => {
   );
 });
 
-export default Carousel;
+export default React.memo(Carousel);
 
 const slideBefore = (width) => keyframes`
   0% {

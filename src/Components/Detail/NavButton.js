@@ -16,7 +16,7 @@ const NavButton = ({ direction, event }) => {
   );
 };
 
-export default NavButton;
+export default React.memo(NavButton);
 
 const Button = styled.button`
   width: 3.5rem;

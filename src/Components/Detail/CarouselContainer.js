@@ -1,4 +1,10 @@
-import React, { useState, useReducer, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useReducer,
+  useCallback,
+  useEffect,
+  useRef,
+} from "react";
 import Carousel from "./Carousel";
 import actions from "../../Data/constant";
 import { debounce } from "lodash";
@@ -62,8 +68,8 @@ const CarouselContainer = ({ images, size }) => {
   const frameRef = useRef(null);
 
   const getImages = () => dispatch({ type: GET_IMAGES, images });
-  const moveNext = () => dispatch({ type: MOVE_NEXT });
-  const moveBefore = () => dispatch({ type: MOVE_BEFORE });
+  const moveNext = useCallback(() => dispatch({ type: MOVE_NEXT }), []);
+  const moveBefore = useCallback(() => dispatch({ type: MOVE_BEFORE }), []);
   const endMove = () =>
     setTimeout(
       () => dispatch({ type: END_MOVE, newArray: [images[currentIdx]] }),
