@@ -4,44 +4,60 @@ import styled, { css, keyframes } from "styled-components";
 import { Link } from "react-scroll";
 import { Close } from "@styled-icons/evaicons-solid/Close";
 
-const Menu = ({ isHome, menuState, closeMenu }) => {
+const Menu = ({ isMain, menuState, closeMenu }) => {
   if (menuState === null) return null;
   return ReactDOM.createPortal(
     <Wrapper menuState={menuState}>
-      <Nav isHome={isHome}>
-        <Link
-          onClick={closeMenu}
-          smooth
-          spy
-          hashSpy
-          to="home"
-          activeClass="active"
-          duration={800}
-        >
-          HOME
-        </Link>
-        <Link
-          onClick={closeMenu}
-          smooth
-          spy
-          hashSpy
-          to="about"
-          activeClass="active"
-          duration={800}
-        >
-          ABOUT
-        </Link>
-        <Link
-          onClick={closeMenu}
-          smooth
-          spy
-          hashSpy
-          to="project"
-          activeClass="active"
-          duration={800}
-        >
-          PROJECT
-        </Link>
+      <Nav>
+        {isMain ? (
+          <>
+            <Link
+              onClick={closeMenu}
+              smooth
+              spy
+              hashSpy
+              to="home"
+              activeClass="active"
+              duration={800}
+            >
+              HOME
+            </Link>
+            <Link
+              onClick={closeMenu}
+              smooth
+              spy
+              hashSpy
+              to="about"
+              activeClass="active"
+              duration={800}
+            >
+              ABOUT
+            </Link>
+            <Link
+              onClick={closeMenu}
+              smooth
+              spy
+              hashSpy
+              to="project"
+              activeClass="active"
+              duration={800}
+            >
+              PROJECT
+            </Link>
+          </>
+        ) : (
+          <>
+            <Anchor onClick={closeMenu} href="/#home">
+              HOME
+            </Anchor>
+            <Anchor onClick={closeMenu} href="/#about">
+              ABOUT
+            </Anchor>
+            <Anchor onClick={closeMenu} href="/#project">
+              PROJECT
+            </Anchor>
+          </>
+        )}
       </Nav>
       <Button onClick={closeMenu} type="button" aria-label="메뉴 닫기">
         <Close size="30" />
@@ -71,6 +87,20 @@ const hide = keyframes`
 }
 `;
 
+const linkStyle = css`
+  cursor: pointer;
+  font-size: 5rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  transition: 0.2s ease-in;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+  }
+`;
+
 const Wrapper = styled.div`
   background-color: lightseagreen;
   width: 100vw;
@@ -96,20 +126,12 @@ const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   outline: none;
+  color: white;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 
   & * {
-    cursor: pointer;
-    font-size: 5rem;
-    font-weight: 600;
-    color: white;
-    margin: 2rem 0;
-    transition: 0.2s ease-in;
-
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
-      transition: 0.2s ease-in;
-    }
+    ${linkStyle}
   }
 `;
 
@@ -132,3 +154,5 @@ const Button = styled.button`
     border: 2px solid white;
   }
 `;
+
+const Anchor = styled.a``;

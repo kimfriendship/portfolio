@@ -67,7 +67,7 @@ const Wrapper = styled.div`
 
 const Logo = styled.h1`
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: ${({ isHome }) => (isHome ? "white" : "black")};
 `;
 
