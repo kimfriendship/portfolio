@@ -1,6 +1,7 @@
 import React, { useState, useReducer, useEffect, useRef } from "react";
 import Carousel from "./Carousel";
 import actions from "../../Data/constant";
+import { debounce } from "lodash";
 
 const { GET_IMAGES, MOVE_BEFORE, MOVE_NEXT, END_MOVE } = actions;
 
@@ -55,7 +56,8 @@ const reducer = (state, action) => {
 
 const CarouselContainer = ({ images, size }) => {
   const [state, dispatch] = useReducer(reducer, initState);
-  const { isMovingNext, isMovingBefore, currentIdx } = state;
+  const { isMovingNext, isMovingBefore, currentIdx, fullArray } = state;
+  const [viewSize, setViewSize] = useState(window.innerWidth);
   const [frameWidth, getFrameWidth] = useState(null);
   const frameRef = useRef(null);
 
@@ -68,15 +70,18 @@ const CarouselContainer = ({ images, size }) => {
       300
     );
 
+  const getViewSize = debounce(() => setViewSize(window.innerWidth), 200);
+  window.addEventListener("resize", getViewSize);
+
   useEffect(() => {
+    !fullArray.length && getImages();
     (isMovingNext || isMovingBefore) && endMove();
   }, [isMovingNext, isMovingBefore]);
 
   useEffect(() => {
-    getImages();
     frameRef.current && getFrameWidth(frameRef.current.clientWidth);
-    console.log(frameWidth);
-  }, [frameRef.current]);
+    return () => window.removeEventListener("resize", getViewSize);
+  }, [frameRef.current, viewSize]);
 
   return (
     <Carousel

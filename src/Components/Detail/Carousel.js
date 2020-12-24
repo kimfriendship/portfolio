@@ -11,7 +11,6 @@ const Carousel = forwardRef(({ state, size, events, frameWidth }, ref) => {
     currentIdx,
   } = state;
   const { moveNext, moveBefore } = events;
-  console.log(frameWidth);
 
   if (!count) return null;
   return (

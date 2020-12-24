@@ -12,7 +12,7 @@ const ViewChecker = () => {
 
   useEffect(() => {
     return () => window.removeEventListener("resize", getViewSize);
-  }, [viewSize]);
+  }, []);
 
   return (
     <>
