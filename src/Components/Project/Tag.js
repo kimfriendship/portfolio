@@ -17,7 +17,8 @@ const Tag = ({ name, date, position }) => {
     <ScrollAnimation
       animateIn="flipInX"
       animateOnce
-      delay={isMobile ? 300 : 800}
+      // offset="200"
+      delay={isMobile ? 300 : 500}
       style={isMobile ? mobileStyle : pcStyle}
     >
       <Wrapper>

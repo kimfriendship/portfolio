@@ -1,12 +1,16 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const location = useLocation();
   const { pathname: path, hash } = location;
   const isHome = (path === "/" && hash === "#home") || (path === "/" && !hash);
+
+  useEffect(() => {
+    console.log(location, isHome);
+  }, [isHome, location]);
 
   return (
     <Background isHome={isHome}>
@@ -15,15 +19,36 @@ const Header = () => {
           <HomeLink href="localhost:3001">kimFriendship</HomeLink>
         </Logo>
         <Nav isHome={isHome}>
-          <NavHashLink smooth to="/#home" activeClassName="active">
+          <Link
+            smooth
+            spy
+            hashSpy
+            to="home"
+            activeClass="active"
+            duration={800}
+          >
             HOME
-          </NavHashLink>
-          <NavHashLink smooth to="/#about" activeClassName="active">
+          </Link>
+          <Link
+            smooth
+            spy
+            hashSpy
+            to="about"
+            activeClass="active"
+            duration={800}
+          >
             ABOUT
-          </NavHashLink>
-          <NavHashLink smooth to="/#project" activeClassName="active">
+          </Link>
+          <Link
+            smooth
+            spy
+            hashSpy
+            to="project"
+            activeClass="active"
+            duration={800}
+          >
             PROJECT
-          </NavHashLink>
+          </Link>
         </Nav>
       </Wrapper>
     </Background>

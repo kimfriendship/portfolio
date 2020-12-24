@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
-const BigImg = ({ href, src, width, extraStyle }) => {
+const BigImg = ({ href, src, width, extraStyle, animation }) => {
   return (
-    <Link href={href} width={width} extraStyle={extraStyle}>
-      <Img src={src} />
-    </Link>
+    <ScrollAnimation animateIn={animation} animateOnce>
+      <Link href={href} width={width} extraStyle={extraStyle}>
+        <Img src={src} />
+      </Link>
+    </ScrollAnimation>
   );
 };
 
@@ -25,7 +28,7 @@ const Link = styled.a`
   transition: 0.2s ease-in;
   display: block;
   box-shadow: 0 3px 10px 0 lightgray;
-  width: ${({ width }) => (width ? width : "75%")};
+  width: ${({ width }) => (width ? width : "70%")};
   ${({ extraStyle }) => extraStyle};
 
   &:hover,

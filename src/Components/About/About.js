@@ -11,7 +11,7 @@ const About = () => {
   return (
     <Section id="about">
       <Title>ABOUT</Title>
-      <ScrollAnimation animateIn="fadeInUp" animateOnce>
+      <ScrollAnimation animateIn="slideInUp" animateOnce>
         <Content>
           <Image />
           <Wrapper>

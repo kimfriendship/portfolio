@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollAnimation from "react-animate-on-scroll";
 
-const SmallImg = ({ href, src, position, width }) => {
+const SmallImg = ({ href, src, position, width, animation }) => {
   return (
-    <Link href={href} width={width} position={position}>
-      <Img src={src} />
-    </Link>
+    <ScrollAnimation animateIn={animation} animateOnce>
+      <Link href={href} width={width} position={position}>
+        <Img src={src} />
+      </Link>
+    </ScrollAnimation>
   );
 };
 
@@ -21,7 +24,7 @@ const Img = styled.img`
 
 const Link = styled.a`
   ${({ position }) => position}
-  width: ${({ width }) => width || "50%"};
+  width: ${({ width }) => width || "45%"};
   box-shadow: 0 3px 10px 0 lightgray;
   cursor: pointer;
   position: absolute;
