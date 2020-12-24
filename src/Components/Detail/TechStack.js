@@ -29,6 +29,7 @@ const List = styled.ul`
   margin-top: 1.5rem;
   font-size: 1.6rem;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const Item = styled.li`

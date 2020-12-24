@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuButton from "./MenuButton";
 
-const MenuButtonContainer = () => {
+const MenuButtonContainer = ({ isHome }) => {
   const [menuState, setMenuState] = useState(null);
   const openMenu = () => setMenuState(true);
   const closeMenu = () => {
@@ -9,7 +9,9 @@ const MenuButtonContainer = () => {
     setTimeout(() => setMenuState(null), 300);
   };
 
-  return <MenuButton menu={{ menuState, openMenu, closeMenu }} />;
+  return (
+    <MenuButton isHome={isHome} menu={{ menuState, openMenu, closeMenu }} />
+  );
 };
 
 export default MenuButtonContainer;

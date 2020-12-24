@@ -11,6 +11,7 @@ const Navigation = ({ isHome, isDetail }) => {
       {isMain ? (
         <>
           <Link
+            tabIndex="0"
             smooth
             spy
             hashSpy
@@ -21,6 +22,7 @@ const Navigation = ({ isHome, isDetail }) => {
             HOME
           </Link>
           <Link
+            tabIndex="0"
             smooth
             spy
             hashSpy
@@ -31,6 +33,7 @@ const Navigation = ({ isHome, isDetail }) => {
             ABOUT
           </Link>
           <Link
+            tabIndex="0"
             smooth
             spy
             hashSpy
@@ -65,7 +68,7 @@ const linkStyle = (isHome) => css`
     content: " ";
     padding: 0.2rem 0;
     transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border-bottom: ${({ isHome }) => `2px solid ${isHome ? "white" : "black"}`};
   }
 
@@ -91,7 +94,8 @@ const Nav = styled.nav`
   }
 
   & * {
-    ${({ isHome }) => linkStyle(isHome)}
+    ${({ isHome }) => linkStyle(isHome)};
+    outline: none;
   }
 
   @media ${({ theme }) => theme.size.mobile} {

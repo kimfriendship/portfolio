@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { debounce } from "lodash";
+import { throttle } from "lodash";
 import Header from "./Header";
 
 const HeaderContainer = () => {
@@ -11,7 +11,7 @@ const HeaderContainer = () => {
   const turningPoint = window.innerHeight - 70;
   const checkHome = !isDetail && window.scrollY < turningPoint;
   const [isHome, setIsHome] = useState(checkHome);
-  const checkScroll = debounce(
+  const checkScroll = throttle(
     () => setIsHome(!isDetail && window.scrollY < turningPoint),
     200
   );
