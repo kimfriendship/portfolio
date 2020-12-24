@@ -52,6 +52,8 @@ const Background = styled.header`
   top: 0;
   left: 0;
   z-index: 100;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 `;
 
 const Wrapper = styled.div`

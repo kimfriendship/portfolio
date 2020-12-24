@@ -21,10 +21,11 @@ const Content = ({ project }) => {
 export default Content;
 
 const Wrapper = styled.div`
-  /* background-color: lavender; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin-top: 5rem;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 `;

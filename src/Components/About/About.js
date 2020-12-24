@@ -30,6 +30,8 @@ export default About;
 const Content = styled.div`
   margin-top: 10rem;
   display: flex;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 
   @media ${({ theme }) => theme.size.mobile} {
     flex-direction: column;
