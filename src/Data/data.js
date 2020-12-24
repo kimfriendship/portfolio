@@ -65,7 +65,7 @@ const data = [
       "React",
       "Redux",
       "Redux-Thunk",
-      "sized-Component",
+      "Styled-Component",
     ],
     github: "https://github.com/kimfriendship/airdnd-frontend",
     page: "",
