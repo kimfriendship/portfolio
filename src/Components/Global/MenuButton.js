@@ -1,12 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import { Menu } from "@styled-icons/boxicons-regular/Menu";
+import MenuContainer from "./MenuContainer";
 
-const MenuButton = ({ isHome, openMenu, menuState }) => {
+const MenuButton = ({ isHome, menu }) => {
+  const { menuState, openMenu, closeMenu } = menu;
   return (
-    <Button type="button" aria-label="메뉴" isHome={isHome} onClick={openMenu}>
-      <Menu size="30" menuState={menuState} />
-    </Button>
+    <>
+      <Button
+        type="button"
+        aria-label="메뉴 열기"
+        isHome={isHome}
+        onClick={openMenu}
+      >
+        <Menu size="30" />
+      </Button>
+      <MenuContainer menu={{ menuState, closeMenu }} />
+    </>
   );
 };
 
