@@ -1,40 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
-
-import { debounce } from "lodash";
 import Navigation from "./Navigation";
 import MenuButtonContainer from "./MenuButtonContainer";
 
-const Header = () => {
-  // const [isHome, setIsHome] = useState(null);
-  // const viewHeight = window.innerHeight;
-  // const offset = window.scrollY;
-  // const checkHome = debounce(() => {
-  //   setIsHome(offset > viewHeight);
-  //   console.log("=====", offset, viewHeight);
-  // }, 200);
-  // window.addEventListener("scroll", checkHome);
-
-  // const location = useLocation();
-  // const { pathname: path, hash } = location;
-  // const isHome = (path === "/" && hash === "#home") || (path === "/" && !hash);
-
-  const isHome = true;
-
-  useEffect(() => {
-    // console.log(location, isHome);
-    console.log(isHome);
-    // return () => window.removeEventListener("scroll", checkHome);
-  }, []);
-
+const Header = ({ isHome, isDetail }) => {
   return (
     <Background isHome={isHome}>
       <Wrapper>
         <Logo isHome={isHome}>
           <HomeLink href="localhost:3001">kimFriendship</HomeLink>
         </Logo>
-        <Navigation isHome={isHome} />
+        <Navigation isHome={isHome} isDetail={isDetail} />
         <MenuButtonContainer isHome={isHome} />
       </Wrapper>
     </Background>

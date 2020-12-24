@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const TechStack = ({ techStack }) => {
-  const isTechStack = techStack;
-  console.log(techStack);
   return (
     <>
       <Heading>Tech Stack</Heading>

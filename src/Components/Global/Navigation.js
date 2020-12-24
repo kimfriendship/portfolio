@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { Link } from "react-scroll";
 
-const Navigation = ({ isHome }) => {
+const Navigation = ({ isHome, isDetail }) => {
   const { pathname } = useLocation();
   const isMain = pathname === "/";
   return (
@@ -45,7 +45,9 @@ const Navigation = ({ isHome }) => {
         <>
           <Menu href="/#home">HOME</Menu>
           <Menu href="/#about">ABOUT</Menu>
-          <Menu href="/#project">PROJECT</Menu>
+          <Menu href="/#project" className={isDetail ? "active" : ""}>
+            PROJECT
+          </Menu>
         </>
       )}
     </Nav>
