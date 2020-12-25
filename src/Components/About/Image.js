@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Boree from "../../Asset/boree.jpeg";
+import Profile from "../../Asset/profile.jpeg";
 
 const Image = () => {
-  return <Pic src={Boree} />;
+  return <Pic src={Profile} />;
 };
 
 export default Image;
