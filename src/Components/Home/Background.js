@@ -8,14 +8,15 @@ const Background = () => {
 export default Background;
 
 const Overlay = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: absolute;
   z-index: -10;
   top: 0;
   left: 0;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://cdn.pixabay.com/photo/2019/03/05/20/35/cat-4037008_1280.jpg");
-  background-size: cover; */
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfzRGyU4OOoeCHfnUi6nc_cITqBTvWhK49_g&usqp=CAU");
+  background-size: cover;
+  background-position: center;
   background-color: black;
 `;
