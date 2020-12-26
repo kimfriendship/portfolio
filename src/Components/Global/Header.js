@@ -40,7 +40,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto -0.5rem;
 `;
 
 const Logo = styled.h1`

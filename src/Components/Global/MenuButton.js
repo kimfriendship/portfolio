@@ -28,6 +28,7 @@ const Button = styled.button`
   outline: none;
   cursor: pointer;
   padding: 0;
+  margin-top: -0.7rem;
   width: 3.5rem;
   height: 3.5rem;
   transition: 0.2s ease-in;
@@ -41,6 +42,8 @@ const Button = styled.button`
   }
 
   @media ${({ theme }) => theme.size.mobile} {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

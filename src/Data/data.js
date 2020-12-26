@@ -18,7 +18,6 @@ const data = [
     detail:
       "직접 주도하여 프론트와 백 개발자들이 함께 작업한 airbnb 클론 프로젝트입니다.",
     date: "2020.08.03 - 2020.09.11",
-    topic: "airbnb 클론 프로젝트",
     member: "Frontend 4명, Backend 4명",
     techStack: [
       "JavaScript",
@@ -70,7 +69,6 @@ const data = [
     name: "ghost-leg",
     detail: "캔버스와 리액트를 활용하여 만든 사다리 타기 게임입니다. ",
     date: "2020.06.20 - 2020.06.29",
-    topic: "랜덤 사다리 타기",
     member: "개인 프로젝트",
     techStack: ["Canvas", "JavaScript", "React", "Styled-Component"],
     github: "https://github.com/kimfriendship/ghost-leg",
@@ -90,12 +88,12 @@ const data = [
       },
     ],
     features: [
+      "웹 접근성 지침에 부합하도록 마크업 (ver2.1.0)",
+      "최적화를 통해 리렌더링 최소화 및 성능 향상 (ver2.1.0)",
+      "PC와 Mobile 버전으로 반응형 구현 (ver2.1.0)",
       "플레이어 수에 따른 랜덤 프로필과 랜덤 사다리 설정",
       "사다리 게임 로직을 리액트의 상태 관리와 자바스크립트로 구현",
       "캔버스를 활용하여 사다리 경로를 그리기 기능 구현",
-      "웹 접근성 지침에 부합하도록 마크업",
-      "최적화를 통해 리렌더링 최소화 및 성능 향상",
-      "PC와 Mobile 버전으로 반응형 구현",
     ],
     size: {
       paddingBottom: "50%",
@@ -106,7 +104,6 @@ const data = [
     name: "time-to-travel",
     detail: "바닐라 스크립트로 작성한 여행 스케줄 관리 프로젝트입니다.",
     date: "2020.04.20 - 2020.04.24",
-    topic: "여행 스케줄 관리 앱",
     member: "Frontend 3명",
     techStack: ["JSON Server", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/kimfriendship/time-to-travel",
