@@ -2,10 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const SmallImg = ({ href, src, alt, position, width, animation }) => {
+const SmallImg = ({ href, src, alt, position, width, animation, events }) => {
+  const { onMouseOver, onMouseLeave } = events;
+
   return (
     <ScrollAnimation animateIn={animation} animateOnce>
-      <Link href={href} width={width} position={position}>
+      <Link
+        href={href}
+        width={width}
+        position={position}
+        onMouseOver={onMouseOver}
+        onMouseLeave={onMouseLeave}
+      >
         <Img src={src} alt={alt} />
       </Link>
     </ScrollAnimation>

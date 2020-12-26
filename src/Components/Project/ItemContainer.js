@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import Item from "./Item";
 
 const ItemContainer = ({ itemData }) => {
-  const [isOver, setIsOver] = useState(false);
-  const onMouseOver = () => setIsOver(true);
-  const onMouseLeave = () => setIsOver(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const onMouseOver = () => setIsHovered(true);
+  const onMouseLeave = () => setIsHovered(false);
 
   return (
     <Item
       itemData={itemData}
-      isOver={isOver}
-      onMouseOver={onMouseOver}
-      onMouseLeave={onMouseLeave}
+      isHovered={isHovered}
+      events={{ onMouseOver, onMouseLeave }}
     />
   );
 };

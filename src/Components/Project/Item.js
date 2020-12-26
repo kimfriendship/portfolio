@@ -4,14 +4,13 @@ import BigImg from "./BigImg";
 import SmallImg from "./SmallImg";
 import styled from "styled-components";
 
-const Item = ({ itemData, isOver, onMouseOver, onMouseLeave }) => {
+const Item = ({ itemData, isHovered, events }) => {
   const { bigImg, smallImg, tagStyle, name, date, mainStyle } = itemData;
 
   return (
     <Wrapper bottom={mainStyle.bottom}>
       <BigImg
-        onMouseOver={onMouseOver}
-        onMouseLeave={onMouseLeave}
+        events={events}
         animation={bigImg.animation}
         src={bigImg.src}
         alt={bigImg.slt}
@@ -20,6 +19,7 @@ const Item = ({ itemData, isOver, onMouseOver, onMouseLeave }) => {
         extraStyle={bigImg.extraStyle}
       />
       <SmallImg
+        events={events}
         animation={smallImg.animation}
         href={smallImg.href}
         src={smallImg.src}
@@ -27,7 +27,7 @@ const Item = ({ itemData, isOver, onMouseOver, onMouseLeave }) => {
         width={smallImg.width}
         position={smallImg.position}
       />
-      <Tag isOver={isOver} name={name} date={date} position={tagStyle} />
+      <Tag isHovered={isHovered} name={name} date={date} position={tagStyle} />
     </Wrapper>
   );
 };
