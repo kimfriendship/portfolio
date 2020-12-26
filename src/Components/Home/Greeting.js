@@ -21,6 +21,10 @@ const Text = styled.span`
   margin: 0 auto;
   margin-bottom: 1rem;
   text-align: center;
+
+  @media ${({ theme }) => theme.size.mobile} {
+    font-size: 4rem;
+  }
 `;
 
 const Wrapper = styled.div`

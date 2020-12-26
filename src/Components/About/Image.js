@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Profile from "../../Asset/profile.jpeg";
 
 const Image = () => {
-  return <Pic src={Profile} />;
+  return <Pic src={Profile} alt="김우정 프로필 사진" />;
 };
 
 export default Image;

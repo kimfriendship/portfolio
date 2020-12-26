@@ -17,6 +17,7 @@ const Navigation = ({ isHome, isDetail }) => {
             hashSpy
             to="home"
             activeClass="active"
+            className={isHome ? "active" : ""}
             duration={800}
           >
             HOME

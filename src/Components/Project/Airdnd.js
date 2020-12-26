@@ -12,6 +12,7 @@ const Airdnd = () => {
       <BigImg
         animation="fadeInLeft"
         src={Big}
+        alt="airdnd 프로젝트 리스트형 검색 페이지 썸네일"
         href="http://localhost:3001/project?name=airdnd"
         width="80%"
       />
@@ -19,6 +20,7 @@ const Airdnd = () => {
         animation="fadeInRight"
         href="http://localhost:3001/project?name=airdnd"
         src={Small}
+        alt="airdnd 프로젝트 카드형 검색 페이지 썸네일"
         width="30%"
         position={css`
           bottom: -10rem;

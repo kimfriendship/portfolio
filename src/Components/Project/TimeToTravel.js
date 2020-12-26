@@ -12,11 +12,13 @@ const TimeToTravel = () => {
       <BigImg
         animation="fadeInLeft"
         src={Home}
+        alt="time-to-travel 프로젝트 홈 화면 썸네일"
         href="http://localhost:3001/project?name=time-to-travel"
       />
       <SmallImg
         animation="fadeInRight"
         src={Timeline}
+        alt="time-to-travel 프로젝트 타임라인 화면 썸네일"
         href="http://localhost:3001/project?name=time-to-travel"
         position={css`
           bottom: -10rem;
