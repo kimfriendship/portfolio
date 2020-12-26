@@ -19,6 +19,7 @@ const Menu = ({ isMain, menuState, closeMenu }) => {
               to="home"
               activeClass="active"
               duration={800}
+              tabIndex="3"
             >
               HOME
             </Link>
@@ -30,6 +31,7 @@ const Menu = ({ isMain, menuState, closeMenu }) => {
               to="about"
               activeClass="active"
               duration={800}
+              tabIndex="4"
             >
               ABOUT
             </Link>
@@ -41,25 +43,31 @@ const Menu = ({ isMain, menuState, closeMenu }) => {
               to="project"
               activeClass="active"
               duration={800}
+              tabIndex="5"
             >
               PROJECT
             </Link>
           </>
         ) : (
           <>
-            <Anchor onClick={closeMenu} href="/#home">
+            <Anchor onClick={closeMenu} href="/#home" tabIndex="3">
               HOME
             </Anchor>
-            <Anchor onClick={closeMenu} href="/#about">
+            <Anchor onClick={closeMenu} href="/#about" tabIndex="4">
               ABOUT
             </Anchor>
-            <Anchor onClick={closeMenu} href="/#project">
+            <Anchor onClick={closeMenu} href="/#project" tabIndex="5">
               PROJECT
             </Anchor>
           </>
         )}
       </Nav>
-      <Button onClick={closeMenu} type="button" aria-label="메뉴 닫기">
+      <Button
+        onClick={closeMenu}
+        type="button"
+        aria-label="메뉴 닫기"
+        tabIndex="6"
+      >
         <Close size="30" />
       </Button>
     </Wrapper>,
@@ -155,4 +163,6 @@ const Button = styled.button`
   }
 `;
 
-const Anchor = styled.a``;
+const Anchor = styled.a`
+  outline: none;
+`;

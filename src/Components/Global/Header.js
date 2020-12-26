@@ -8,7 +8,7 @@ const Header = ({ isHome, isDetail }) => {
     <Background isHome={isHome}>
       <Wrapper>
         <Logo isHome={isHome}>
-          <HomeLink isHome={isHome} href="http://localhost:3001">
+          <HomeLink isHome={isHome} href="http://localhost:3001" tabIndex="1">
             kimFriendship
           </HomeLink>
         </Logo>

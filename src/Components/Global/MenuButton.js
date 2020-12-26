@@ -10,6 +10,7 @@ const MenuButton = ({ isHome, menu }) => {
       <Button
         type="button"
         aria-label="메뉴 열기"
+        tabIndex="2"
         isHome={isHome}
         onClick={openMenu}
       >
