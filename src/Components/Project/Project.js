@@ -1,12 +1,12 @@
 import React from "react";
 import { Title, Section } from "../index";
-import ViewChecker from "./ViewChecker";
+import ListContainer from "./ListContainer";
 
 const Project = () => {
   return (
     <Section id="project">
       <Title>PROJECT</Title>
-      <ViewChecker />
+      <ListContainer />
     </Section>
   );
 };

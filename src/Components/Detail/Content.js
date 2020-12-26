@@ -6,7 +6,7 @@ import Info from "./Info";
 import TechStack from "./TechStack";
 
 const Content = ({ project }) => {
-  const { features, techStack, images, size } = project;
+  const { features, techStack, images, carouselSize: size } = project;
 
   return (
     <Wrapper>

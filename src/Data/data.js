@@ -10,6 +10,13 @@ import DND_Cards from "../Asset/DND_Cards.png";
 import DND_Filter from "../Asset/DND_Filter.png";
 import DND_Map from "../Asset/DND_Map.png";
 import DND_Modal from "../Asset/DND_Modal.png";
+import DND_Big from "../Asset/DND_Big.png";
+import DND_Small from "../Asset/DND_Small.png";
+import GL_Big from "../Asset/GL_Game.png";
+import GL_Small from "../Asset/GL_Small.png";
+import TTT_Big from "../Asset/TTT_Big.png";
+import TTT_Small from "../Asset/TTT_Small.png";
+import { css } from "styled-components";
 
 const data = [
   {
@@ -60,8 +67,33 @@ const data = [
       "검색 조건을 query로 관리하여 refresh 되더라도 상태 유지",
       "3가지 뷰포트를 기준으로 한 반응형 구현",
     ],
-    size: {
+    carouselSize: {
       paddingBottom: "40%",
+    },
+    bigImg: {
+      animation: "fadeInLeft",
+      src: DND_Big,
+      alt: "airdnd 프로젝트 리스트형 검색 페이지 썸네일",
+      href: "http://localhost:3001/project?name=airdnd",
+      width: "80%",
+    },
+    smallImg: {
+      animation: "fadeInRight",
+      href: "http://localhost:3001/project?name=airdnd",
+      src: DND_Small,
+      alt: "airdnd 프로젝트 카드형 검색 페이지 썸네일",
+      width: "30%",
+      position: css`
+        bottom: -10rem;
+        right: 0;
+      `,
+    },
+    tagStyle: {
+      bottom: "-8rem",
+      left: 0,
+    },
+    mainStyle: {
+      bottom: "30rem",
     },
   },
   {
@@ -95,8 +127,34 @@ const data = [
       "사다리 게임 로직을 리액트의 상태 관리와 자바스크립트로 구현",
       "캔버스를 활용하여 사다리 경로를 그리기 기능 구현",
     ],
-    size: {
+    carouselSize: {
       paddingBottom: "50%",
+    },
+    bigImg: {
+      animation: "fadeInRight",
+      src: GL_Big,
+      alt: "ghost-leg 프로젝트 게임 페이지 썸네일",
+      href: "http://localhost:3001/project?name=ghost-leg",
+      extraStyle: css`
+        margin-left: 30%;
+      `,
+    },
+    smallImg: {
+      animation: "fadeInLeft",
+      href: "http://localhost:3001/project?name=ghost-leg",
+      src: GL_Small,
+      alt: "ghost-leg 프로젝트 결과 페이지 썸네일",
+      position: css`
+        bottom: 4rem;
+        left: 0;
+      `,
+    },
+    tagStyle: {
+      top: "15%",
+      left: 0,
+    },
+    mainStyle: {
+      bottom: "20rem",
     },
   },
   {
@@ -132,8 +190,32 @@ const data = [
       "여행지 정보 제공 및 예약 정보를 저장할 수 있는 기능 구현",
       "여행지별 목록을 나열할 수 있는 기능 구현",
     ],
-    size: {
+    carouselSize: {
       paddingBottom: "50%",
+    },
+    bigImg: {
+      animation: "fadeInLeft",
+      src: TTT_Big,
+      alt: "time-to-travel 프로젝트 홈 화면 썸네일",
+      href: "http://localhost:3001/project?name=time-to-travel",
+    },
+    smallImg: {
+      animation: "fadeInRight",
+      href: "http://localhost:3001/project?name=time-to-travel",
+      src: TTT_Small,
+      alt: "time-to-travel 프로젝트 타임라인 화면 썸네",
+      position: css`
+        bottom: -10rem;
+        right: 0;
+      `,
+    },
+    tagStyle: {
+      top: "18%",
+      right: 0,
+      textAlign: "right",
+    },
+    mainStyle: {
+      bottom: "10rem",
     },
   },
 ];
