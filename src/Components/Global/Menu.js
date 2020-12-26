@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import ReactDOM from "react-dom";
 import styled, { css, keyframes } from "styled-components";
 import { Link } from "react-scroll";
@@ -50,15 +51,15 @@ const Menu = ({ isMain, menuState, closeMenu }) => {
           </>
         ) : (
           <>
-            <Anchor onClick={closeMenu} href="/#home" tabIndex="3">
+            <NavLink onClick={closeMenu} to="/#home" tabIndex="3">
               HOME
-            </Anchor>
-            <Anchor onClick={closeMenu} href="/#about" tabIndex="4">
+            </NavLink>
+            <NavLink onClick={closeMenu} to="/#about" tabIndex="4">
               ABOUT
-            </Anchor>
-            <Anchor onClick={closeMenu} href="/#project" tabIndex="5">
+            </NavLink>
+            <NavLink onClick={closeMenu} to="/#project" tabIndex="5">
               PROJECT
-            </Anchor>
+            </NavLink>
           </>
         )}
       </Nav>
@@ -95,20 +96,6 @@ const hide = keyframes`
 }
 `;
 
-const linkStyle = css`
-  cursor: pointer;
-  font-size: 5rem;
-  font-weight: 600;
-  margin: 2rem 0;
-  transition: 0.2s ease-in;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-    transition: 0.2s ease-in;
-  }
-`;
-
 const Wrapper = styled.div`
   background-color: lightseagreen;
   width: 100vw;
@@ -139,7 +126,18 @@ const Nav = styled.nav`
     Helvetica Neue, sans-serif;
 
   & * {
-    ${linkStyle}
+    cursor: pointer;
+    outline: none;
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    transition: 0.2s ease-in;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      transition: 0.2s ease-in;
+    }
   }
 `;
 
@@ -161,8 +159,4 @@ const Button = styled.button`
   &:focus {
     border: 2px solid white;
   }
-`;
-
-const Anchor = styled.a`
-  outline: none;
 `;

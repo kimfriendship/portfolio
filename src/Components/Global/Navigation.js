@@ -1,11 +1,12 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-import styled, { css } from "styled-components";
+import { NavLink, useLocation } from "react-router-dom";
+import styled from "styled-components";
 import { Link } from "react-scroll";
 
 const Navigation = ({ isHome, isDetail }) => {
   const { pathname } = useLocation();
   const isMain = pathname === "/";
+
   return (
     <Nav isHome={isHome}>
       {isMain ? (
@@ -16,8 +17,8 @@ const Navigation = ({ isHome, isDetail }) => {
             spy
             hashSpy
             to="home"
-            activeClass="active"
-            className={isHome ? "active" : ""}
+            activeClass="activeMenu"
+            className={isHome ? "activeMenu" : ""}
             duration={800}
           >
             HOME
@@ -28,7 +29,7 @@ const Navigation = ({ isHome, isDetail }) => {
             spy
             hashSpy
             to="about"
-            activeClass="active"
+            activeClass="activeMenu"
             duration={800}
           >
             ABOUT
@@ -39,7 +40,7 @@ const Navigation = ({ isHome, isDetail }) => {
             spy
             hashSpy
             to="project"
-            activeClass="active"
+            activeClass="activeMenu"
             duration={800}
           >
             PROJECT
@@ -47,11 +48,11 @@ const Navigation = ({ isHome, isDetail }) => {
         </>
       ) : (
         <>
-          <Menu href="/#home">HOME</Menu>
-          <Menu href="/#about">ABOUT</Menu>
-          <Menu href="/#project" className={isDetail ? "active" : ""}>
+          <NavLink to="/#home">HOME</NavLink>
+          <NavLink to="/#about">ABOUT</NavLink>
+          <NavLink to="/#project" className={isDetail ? "activeMenu" : ""}>
             PROJECT
-          </Menu>
+          </NavLink>
         </>
       )}
     </Nav>
@@ -60,25 +61,6 @@ const Navigation = ({ isHome, isDetail }) => {
 
 export default Navigation;
 
-const linkStyle = (isHome) => css`
-  margin-left: 2rem;
-  cursor: pointer;
-
-  &::after {
-    display: block;
-    content: " ";
-    padding: 0.2rem 0;
-    transform: scaleX(0);
-    transition: transform 0.2s ease-in-out;
-    border-bottom: ${({ isHome }) => `2px solid ${isHome ? "white" : "black"}`};
-  }
-
-  &:hover:after,
-  &:focus:after {
-    transform: scaleX(1);
-  }
-`;
-
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -86,7 +68,7 @@ const Nav = styled.nav`
   font-weight: 600;
   color: ${({ isHome }) => (isHome ? "white" : "black")};
 
-  .active {
+  .activeMenu {
     border-bottom: ${({ isHome }) => `2px solid ${isHome ? "white" : "black"}`};
 
     &::after {
@@ -95,13 +77,27 @@ const Nav = styled.nav`
   }
 
   & * {
-    ${({ isHome }) => linkStyle(isHome)};
+    margin-left: 2rem;
     outline: none;
+    cursor: pointer;
+
+    &::after {
+      display: block;
+      content: " ";
+      padding: 0.2rem 0;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out;
+      border-bottom: ${({ isHome }) =>
+        `2px solid ${isHome ? "white" : "black"}`};
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: scaleX(1);
+    }
   }
 
   @media ${({ theme }) => theme.size.mobile} {
     display: none;
   }
 `;
-
-const Menu = styled.a``;

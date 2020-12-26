@@ -74,12 +74,10 @@ const data = [
       animation: "fadeInLeft",
       src: DND_Big,
       alt: "airdnd 프로젝트 리스트형 검색 페이지 썸네일",
-      href: "https://kimfriendship.com/project?name=airdnd",
       width: "80%",
     },
     smallImg: {
       animation: "fadeInRight",
-      href: "https://kimfriendship.com/project?name=airdnd",
       src: DND_Small,
       alt: "airdnd 프로젝트 카드형 검색 페이지 썸네일",
       width: "30%",
@@ -134,14 +132,12 @@ const data = [
       animation: "fadeInRight",
       src: GL_Big,
       alt: "ghost-leg 프로젝트 게임 페이지 썸네일",
-      href: "https://kimfriendship.com/project?name=ghost-leg",
       extraStyle: css`
         margin-left: 30%;
       `,
     },
     smallImg: {
       animation: "fadeInLeft",
-      href: "https://kimfriendship.com/project?name=ghost-leg",
       src: GL_Small,
       alt: "ghost-leg 프로젝트 결과 페이지 썸네일",
       position: css`
@@ -197,11 +193,9 @@ const data = [
       animation: "fadeInLeft",
       src: TTT_Big,
       alt: "time-to-travel 프로젝트 홈 화면 썸네일",
-      href: "https://kimfriendship.com/project?name=time-to-travel",
     },
     smallImg: {
       animation: "fadeInRight",
-      href: "https://kimfriendship.com/project?name=time-to-travel",
       src: TTT_Small,
       alt: "time-to-travel 프로젝트 타임라인 화면 썸네",
       position: css`

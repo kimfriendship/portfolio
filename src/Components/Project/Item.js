@@ -10,18 +10,18 @@ const Item = ({ itemData, isHovered, events }) => {
   return (
     <Wrapper bottom={mainStyle.bottom}>
       <BigImg
+        name={name}
         events={events}
         animation={bigImg.animation}
         src={bigImg.src}
         alt={bigImg.slt}
-        href={bigImg.href}
         width={bigImg.width}
         extraStyle={bigImg.extraStyle}
       />
       <SmallImg
+        name={name}
         events={events}
         animation={smallImg.animation}
-        href={smallImg.href}
         src={smallImg.src}
         alt={smallImg.alt}
         width={smallImg.width}

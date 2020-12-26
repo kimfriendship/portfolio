@@ -1,16 +1,38 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const BigImg = ({ href, src, alt, width, extraStyle, animation, events }) => {
+// const linkStyle = (width, extraStyle) => css`
+//   cursor: pointer;
+//   outline: none;
+//   transition: 0.2s ease-in;
+//   display: block;
+//   box-shadow: 0 3px 10px 0 lightgray;
+//   width: ${({ width }) => (width ? width : "70%")};
+//   ${({ extraStyle }) => extraStyle};
+
+//   &:hover,
+//   &:focus {
+//     transition: 0.2s ease-in;
+//     transform: scale(1.03);
+//     box-shadow: 0 3px 10px 0 gray;
+//   }
+
+//   @media ${({ theme }) => theme.size.mobile} {
+//     width: 100%;
+//     margin: 0 0 2rem 0;
+//   }
+// `;
+
+const BigImg = ({ src, alt, width, extraStyle, animation, events, name }) => {
   const { onMouseOver, onMouseLeave } = events;
 
   return (
     <ScrollAnimation animateIn={animation} animateOnce>
       <Link
-        href={href}
-        width={width}
-        extraStyle={extraStyle}
+        // style={linkStyle(width, extraStyle)}
+        to={`/project?name=${name}`}
         onMouseOver={onMouseOver}
         onMouseLeave={onMouseLeave}
       >
@@ -27,27 +49,5 @@ const Img = styled.img`
 
   @media ${({ theme }) => theme.size.mobile} {
     margin: 0;
-  }
-`;
-
-const Link = styled.a`
-  cursor: pointer;
-  outline: none;
-  transition: 0.2s ease-in;
-  display: block;
-  box-shadow: 0 3px 10px 0 lightgray;
-  width: ${({ width }) => (width ? width : "70%")};
-  ${({ extraStyle }) => extraStyle};
-
-  &:hover,
-  &:focus {
-    transition: 0.2s ease-in;
-    transform: scale(1.03);
-    box-shadow: 0 3px 10px 0 gray;
-  }
-
-  @media ${({ theme }) => theme.size.mobile} {
-    width: 100%;
-    margin: 0 0 2rem 0;
   }
 `;
