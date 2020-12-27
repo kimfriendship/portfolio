@@ -10,7 +10,7 @@ const Info = ({ project }) => {
 
   return (
     <>
-      <Span gap="5rem">{detail}</Span>
+      <Span gap="3rem">{detail}</Span>
       <List>
         <Item>
           <Calendar size="20" />

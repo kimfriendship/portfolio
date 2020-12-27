@@ -68,7 +68,7 @@ const data = [
       "3가지 뷰포트를 기준으로 한 반응형 구현",
     ],
     carouselSize: {
-      paddingBottom: "40%",
+      paddingBottom: 50,
     },
     bigImg: {
       animation: "fadeInLeft",
@@ -126,7 +126,7 @@ const data = [
       "캔버스를 활용하여 사다리 경로를 그리기 기능 구현",
     ],
     carouselSize: {
-      paddingBottom: "50%",
+      paddingBottom: 60,
     },
     bigImg: {
       animation: "fadeInRight",
@@ -187,7 +187,7 @@ const data = [
       "여행지별 목록을 나열할 수 있는 기능 구현",
     ],
     carouselSize: {
-      paddingBottom: "50%",
+      paddingBottom: 60,
     },
     bigImg: {
       animation: "fadeInLeft",
