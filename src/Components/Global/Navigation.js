@@ -1,37 +1,19 @@
 import React from "react";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
-const Navigation = ({ isHome, isAbout, isProject, isDetail }) => {
+const Navigation = ({ isHome }) => {
   return (
     <Nav isHome={isHome}>
-      <NavHashLink
-        smooth
-        to="/#home"
-        activeClassName="active"
-        className={`${isHome ? "active" : ""}`}
-        tabIndex="3"
-      >
+      <HashLink smooth to="/#home" tabIndex="3">
         HOME
-      </NavHashLink>
-      <NavHashLink
-        smooth
-        to="/#about"
-        activeClassName="active"
-        className={`${isAbout ? "active" : ""}`}
-        tabIndex="4"
-      >
+      </HashLink>
+      <HashLink smooth to="/#about" tabIndex="4">
         ABOUT
-      </NavHashLink>
-      <NavHashLink
-        smooth
-        to="/#project"
-        activeClassName="active"
-        className={`${isProject || isDetail ? "active" : ""}`}
-        tabIndex="5"
-      >
+      </HashLink>
+      <HashLink smooth to="/#project" tabIndex="5">
         PROJECT
-      </NavHashLink>
+      </HashLink>
     </Nav>
   );
 };
@@ -45,13 +27,13 @@ const Nav = styled.nav`
   font-weight: 600;
   color: ${({ isHome }) => (isHome ? "white" : "black")};
 
-  .active {
+  /* .active {
     border-bottom: ${({ isHome }) => `2px solid ${isHome ? "white" : "black"}`};
 
     &::after {
       display: none;
     }
-  }
+  } */
 
   & * {
     margin-left: 2rem;
