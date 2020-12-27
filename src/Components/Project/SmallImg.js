@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ScrollAnimation from "react-animate-on-scroll";
 
-const SmallImg = ({ href, src, alt, position, width, animation, events }) => {
+const SmallImg = ({ name, src, alt, position, width, animation, events }) => {
   const { onMouseOver, onMouseLeave } = events;
 
   return (
     <ScrollAnimation animateIn={animation} animateOnce>
-      <Link
-        href={href}
-        width={width}
-        position={position}
-        onMouseOver={onMouseOver}
-        onMouseLeave={onMouseLeave}
-      >
-        <Img src={src} alt={alt} />
-      </Link>
+      <Wrapper width={width} position={position}>
+        <Link
+          to={`/project?name=${name}`}
+          onMouseOver={onMouseOver}
+          onMouseLeave={onMouseLeave}
+        >
+          <Img src={src} alt={alt} />
+        </Link>
+      </Wrapper>
     </ScrollAnimation>
   );
 };
@@ -30,7 +31,7 @@ const Img = styled.img`
   }
 `;
 
-const Link = styled.a`
+const Wrapper = styled.span`
   ${({ position }) => position}
   width: ${({ width }) => width || "45%"};
   box-shadow: 0 3px 10px 0 lightgray;
