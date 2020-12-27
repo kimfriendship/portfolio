@@ -34,4 +34,5 @@ const List = styled.ul`
 
 const Item = styled.li`
   margin-right: 1rem;
+  height: 2rem;
 `;

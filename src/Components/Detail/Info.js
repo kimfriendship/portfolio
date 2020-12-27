@@ -10,7 +10,7 @@ const Info = ({ project }) => {
 
   return (
     <>
-      <Span>{detail}</Span>
+      <Span gap="5rem">{detail}</Span>
       <List>
         <Item>
           <Calendar size="20" />
@@ -51,6 +51,7 @@ const Item = styled.li`
 const Span = styled.span`
   font-size: 1.6rem;
   line-height: 2.5rem;
+  margin-top: ${({ gap }) => gap};
 `;
 
 const Anchor = styled.a`

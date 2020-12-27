@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CarouselContainer from "./CarouselContainer";
 import Features from "./Features";
 import Info from "./Info";
+import Slider from "./Slider";
 import TechStack from "./TechStack";
 
 const Content = ({ project }) => {
@@ -10,7 +11,8 @@ const Content = ({ project }) => {
 
   return (
     <Wrapper>
-      <CarouselContainer images={images} size={size} />
+      <Slider images={images} size={size} />
+      {/* <CarouselContainer images={images} size={size} /> */}
       <Info project={project} />
       <Features features={features} />
       <TechStack techStack={techStack} />

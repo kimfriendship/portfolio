@@ -75,7 +75,7 @@ const Frame = styled.div`
   padding-bottom: ${({ size }) => size.paddingBottom};
   margin: 0 auto;
   border-radius: 10px;
-  /* background-color: lightgray; */
+  background-color: lightgray;
 `;
 
 const FigureList = styled.ul`
