@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import CarouselContainer from "./CarouselContainer";
 import Features from "./Features";
 import Info from "./Info";
 import Slider from "./Slider";
@@ -12,7 +11,6 @@ const Content = ({ project }) => {
   return (
     <Wrapper>
       <Slider images={images} size={size} />
-      {/* <CarouselContainer images={images} size={size} /> */}
       <Info project={project} />
       <Features features={features} />
       <TechStack techStack={techStack} />
