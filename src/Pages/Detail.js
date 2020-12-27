@@ -4,6 +4,7 @@ import { Content, Section, Title } from "../Components";
 import data from "../Data/data";
 
 const Detail = () => {
+  window.scrollTo(0, 0);
   const { search } = useLocation();
   const projectName = search.split("=")[1];
   const [project] = data.filter(({ name }) => name === projectName);
