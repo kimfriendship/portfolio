@@ -12,4 +12,6 @@ const Foot = styled.footer`
   font-size: 1.3rem;
   text-align: center;
   height: 3rem;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 `;
