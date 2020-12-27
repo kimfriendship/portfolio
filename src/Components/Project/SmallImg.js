@@ -11,6 +11,8 @@ const SmallImg = ({ name, src, alt, position, width, animation, events }) => {
       <Wrapper width={width} position={position}>
         <Link
           to={`/project?name=${name}`}
+          onFocus={onMouseOver}
+          onBlur={onMouseLeave}
           onMouseOver={onMouseOver}
           onMouseLeave={onMouseLeave}
         >
@@ -25,14 +27,10 @@ export default React.memo(SmallImg);
 
 const Img = styled.img`
   width: 100%;
-
-  @media ${({ theme }) => theme.size.mobile} {
-    display: none;
-  }
 `;
 
 const Wrapper = styled.span`
-  ${({ position }) => position}
+  ${({ position }) => position};
   width: ${({ width }) => width || "45%"};
   box-shadow: 0 3px 10px 0 lightgray;
   cursor: pointer;
@@ -45,5 +43,9 @@ const Wrapper = styled.span`
     transition: 0.2s ease-in;
     transform: scale(1.03);
     box-shadow: 0 3px 10px 0 gray;
+  }
+
+  @media ${({ theme }) => theme.size.mobile} {
+    display: none;
   }
 `;

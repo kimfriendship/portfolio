@@ -11,6 +11,8 @@ const BigImg = ({ src, alt, width, extraStyle, animation, events, name }) => {
       <Wrapper width={width} extraStyle={extraStyle}>
         <Link
           to={`/project?name=${name}`}
+          onFocus={onMouseOver}
+          onBlur={onMouseLeave}
           onMouseOver={onMouseOver}
           onMouseLeave={onMouseLeave}
         >

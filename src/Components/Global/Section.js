@@ -19,7 +19,6 @@ const Container = styled.section`
   max-width: 1200px;
   width: 100%;
   height: ${({ height }) => height || "fit-content"};
-  padding: 15rem 0;
-  padding: ${({ isDetail }) => (isDetail ? "11rem 0" : "15rem 0")};
+  padding: ${({ isDetail }) => (isDetail ? "11rem 0" : "15rem 0 10rem")};
   margin: 0 auto;
 `;
