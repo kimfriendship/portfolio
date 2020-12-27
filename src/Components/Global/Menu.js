@@ -1,67 +1,23 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import ReactDOM from "react-dom";
 import styled, { css, keyframes } from "styled-components";
-import { Link } from "react-scroll";
 import { Close } from "@styled-icons/evaicons-solid/Close";
 
-const Menu = ({ isMain, menuState, closeMenu }) => {
+const Menu = ({ menuState, closeMenu }) => {
   if (menuState === null) return null;
   return ReactDOM.createPortal(
     <Wrapper menuState={menuState}>
       <Nav>
-        {isMain ? (
-          <>
-            <Link
-              onClick={closeMenu}
-              smooth
-              spy
-              hashSpy
-              to="home"
-              activeClass="active"
-              duration={800}
-              tabIndex="3"
-            >
-              HOME
-            </Link>
-            <Link
-              onClick={closeMenu}
-              smooth
-              spy
-              hashSpy
-              to="about"
-              activeClass="active"
-              duration={800}
-              tabIndex="4"
-            >
-              ABOUT
-            </Link>
-            <Link
-              onClick={closeMenu}
-              smooth
-              spy
-              hashSpy
-              to="project"
-              activeClass="active"
-              duration={800}
-              tabIndex="5"
-            >
-              PROJECT
-            </Link>
-          </>
-        ) : (
-          <>
-            <NavLink onClick={closeMenu} to="/#home" tabIndex="3">
-              HOME
-            </NavLink>
-            <NavLink onClick={closeMenu} to="/#about" tabIndex="4">
-              ABOUT
-            </NavLink>
-            <NavLink onClick={closeMenu} to="/#project" tabIndex="5">
-              PROJECT
-            </NavLink>
-          </>
-        )}
+        <HashLink onClick={closeMenu} smooth to="/#home" tabIndex="3">
+          HOME
+        </HashLink>
+        <HashLink onClick={closeMenu} smooth to="/#about" tabIndex="4">
+          ABOUT
+        </HashLink>
+        <HashLink onClick={closeMenu} smooth to="/#project" tabIndex="5">
+          PROJECT
+        </HashLink>
       </Nav>
       <Button
         onClick={closeMenu}

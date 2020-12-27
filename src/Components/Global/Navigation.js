@@ -1,60 +1,29 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
-import { Link } from "react-scroll";
 
-const Navigation = ({ isHome, isDetail }) => {
+const Navigation = ({ isHome }) => {
   const { pathname } = useLocation();
-  const isMain = pathname === "/";
+  const isDetail = pathname === "/project";
 
   return (
     <Nav isHome={isHome}>
-      {isMain ? (
-        <>
-          <Link
-            tabIndex="0"
-            smooth
-            spy
-            hashSpy
-            to="home"
-            activeClass="activeMenu"
-            className={isHome ? "activeMenu" : ""}
-            duration={800}
-          >
-            HOME
-          </Link>
-          <Link
-            tabIndex="0"
-            smooth
-            spy
-            hashSpy
-            to="about"
-            activeClass="activeMenu"
-            duration={800}
-          >
-            ABOUT
-          </Link>
-          <Link
-            tabIndex="0"
-            smooth
-            spy
-            hashSpy
-            to="project"
-            activeClass="activeMenu"
-            duration={800}
-          >
-            PROJECT
-          </Link>
-        </>
-      ) : (
-        <>
-          <NavLink to="/#home">HOME</NavLink>
-          <NavLink to="/#about">ABOUT</NavLink>
-          <NavLink to="/#project" className={isDetail ? "activeMenu" : ""}>
-            PROJECT
-          </NavLink>
-        </>
-      )}
+      <NavHashLink smooth to="/#home" activeClassName="active" tabIndex="3">
+        HOME
+      </NavHashLink>
+      <NavHashLink smooth to="/#about" activeClassName="active" tabIndex="4">
+        ABOUT
+      </NavHashLink>
+      <NavHashLink
+        smooth
+        to="/#project"
+        activeClassName="active"
+        className={`${isDetail ? "active" : ""}`}
+        tabIndex="5"
+      >
+        PROJECT
+      </NavHashLink>
     </Nav>
   );
 };
@@ -68,7 +37,7 @@ const Nav = styled.nav`
   font-weight: 600;
   color: ${({ isHome }) => (isHome ? "white" : "black")};
 
-  .activeMenu {
+  .active {
     border-bottom: ${({ isHome }) => `2px solid ${isHome ? "white" : "black"}`};
 
     &::after {
