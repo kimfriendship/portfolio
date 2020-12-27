@@ -1,25 +1,33 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
-const Navigation = ({ isHome }) => {
-  const { pathname } = useLocation();
-  const isDetail = pathname === "/project";
-
+const Navigation = ({ isHome, isAbout, isProject, isDetail }) => {
   return (
     <Nav isHome={isHome}>
-      <NavHashLink smooth to="/#home" activeClassName="active" tabIndex="3">
+      <NavHashLink
+        smooth
+        to="/#home"
+        activeClassName="active"
+        className={`${isHome ? "active" : ""}`}
+        tabIndex="3"
+      >
         HOME
       </NavHashLink>
-      <NavHashLink smooth to="/#about" activeClassName="active" tabIndex="4">
+      <NavHashLink
+        smooth
+        to="/#about"
+        activeClassName="active"
+        className={`${isAbout ? "active" : ""}`}
+        tabIndex="4"
+      >
         ABOUT
       </NavHashLink>
       <NavHashLink
         smooth
         to="/#project"
         activeClassName="active"
-        className={`${isDetail ? "active" : ""}`}
+        className={`${isProject || isDetail ? "active" : ""}`}
         tabIndex="5"
       >
         PROJECT

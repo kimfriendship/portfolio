@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Navigation from "./Navigation";
 import MenuButtonContainer from "./MenuButtonContainer";
 
-const Header = ({ isHome }) => {
+const Header = ({ isHome, isAbout, isProject, isDetail }) => {
   return (
     <Background isHome={isHome}>
       <Wrapper>
@@ -16,7 +16,12 @@ const Header = ({ isHome }) => {
             kimFriendship
           </HomeLink>
         </Logo>
-        <Navigation isHome={isHome} />
+        <Navigation
+          isHome={isHome}
+          isAbout={isAbout}
+          isProject={isProject}
+          isDetail={isDetail}
+        />
         <MenuButtonContainer isHome={isHome} />
       </Wrapper>
     </Background>
