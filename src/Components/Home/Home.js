@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <Section id="home" height="100vh">
-        <Greeting />
         <Background />
+        <Greeting />
       </Section>
     </>
   );

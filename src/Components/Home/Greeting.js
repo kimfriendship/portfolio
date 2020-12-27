@@ -28,7 +28,7 @@ const Text = styled.span`
 `;
 
 const Wrapper = styled.div`
-  /* background-color: lavender; */
+  z-index: 50;
   width: 100%;
   height: 100%;
   display: flex;

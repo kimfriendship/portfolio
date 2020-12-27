@@ -1,22 +1,35 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import Pic from "../../Asset/back.png";
 
 const Background = () => {
-  return <Overlay />;
+  return (
+    <>
+      <Overlay />
+      <Img src={Pic} alt="배경" />
+    </>
+  );
 };
 
 export default Background;
 
-const Overlay = styled.div`
+const position = css`
   width: 100%;
   height: 100%;
+  object-fit: cover;
   position: absolute;
-  z-index: -10;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfzRGyU4OOoeCHfnUi6nc_cITqBTvWhK49_g&usqp=CAU");
-  background-size: cover;
-  background-position: center;
+`;
+
+const Img = styled.img`
+  ${position};
+  z-index: -20;
+`;
+
+const Overlay = styled.div`
+  ${position};
+  z-index: -10;
   background-color: black;
+  opacity: 0.8;
 `;
