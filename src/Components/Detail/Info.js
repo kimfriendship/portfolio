@@ -24,10 +24,12 @@ const Info = ({ project }) => {
           <Github size="20" />
           <Anchor href={github}>Repository 바로가기</Anchor>
         </Item>
-        <Item>
-          <Link size="20" />
-          <Anchor href={page}>페이지 바로가기</Anchor>
-        </Item>
+        {page ? (
+          <Item>
+            <Link size="20" />
+            <Anchor href={page}>페이지 바로가기</Anchor>
+          </Item>
+        ) : null}
       </List>
     </>
   );
