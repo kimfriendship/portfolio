@@ -60,11 +60,33 @@ const Wrapper = styled.div`
   padding-bottom: ${({ size }) => `${size.paddingBottom}%`};
   border-radius: 15px;
 
+  & .carousel {
+    height: 0;
+    padding-bottom: ${({ size }) => `${size.paddingBottom}%`};
+  }
+
   & .carousel .carousel-status {
     font-size: 1.3rem;
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    line-height: 3rem;
+    padding: 0;
+    width: 8rem;
+    height: 3rem;
+    top: calc(100% - 5rem);
+    right: calc(50% - 4rem);
+    background-color: black;
+    opacity: 0.8;
+    border-radius: 5px;
+
+    @media ${({ theme }) => theme.size.mobile} {
+      font-size: 1.1rem;
+      height: 2rem;
+      line-height: 2rem;
+      width: 5rem;
+      right: calc(50% - 2.5rem);
+      top: calc(100% - 3rem);
+    }
   }
 `;
 
@@ -78,6 +100,7 @@ const Button = styled.button`
   width: 3.5rem;
   height: 3.5rem;
   position: absolute;
+  top: calc(50% - 3.5rem / 2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,7 +112,6 @@ const Button = styled.button`
   border: none;
   z-index: 10;
   cursor: pointer;
-  top: ${({ top }) => (top === 60 ? "40%" : "45%")};
   ${({ direction }) =>
     direction
       ? css`
